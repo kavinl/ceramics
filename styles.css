@@ -453,22 +453,22 @@ footer p {
 /* Learn More Section */
 .learn-more-btn {
     display: inline-block;
-    margin: 2rem 0 1rem;
-    padding: 0.75rem 2rem;
-    font-size: 0.9rem;
+    margin: 1.5rem 0 0.5rem;
+    padding: 0;
+    font-size: 0.85rem;
     font-weight: 300;
     letter-spacing: 0.5px;
     color: var(--dark-gray);
     background: transparent;
-    border: 1px solid var(--mid-gray);
+    border: none;
     cursor: pointer;
     transition: var(--transition);
     font-family: 'Work Sans', sans-serif;
+    text-decoration: underline;
 }
 
 .learn-more-btn:hover {
     color: var(--black);
-    border-color: var(--black);
 }
 
 .piece-details-extended {
@@ -484,23 +484,23 @@ footer p {
 
 .piece-details-extended h2 {
     font-family: 'Cormorant', serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 400;
     letter-spacing: 0.5px;
-    margin: 2rem 0 1rem;
+    margin: 1.5rem 0 0.75rem;
     color: var(--black);
 }
 
 .piece-details-extended h2:first-child {
-    margin-top: 0;
+    margin-top: 1.5rem;
 }
 
 .piece-details-extended p {
-    font-size: 1rem;
-    line-height: 1.8;
+    font-size: 0.85rem;
+    line-height: 1.7;
     color: var(--dark-gray);
     font-weight: 300;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 /* Responsive Design */
