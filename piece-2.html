@@ -120,22 +120,34 @@
                 Fired at Callonwalde, Atlanta
             </p>
 
-            <h2>Functional Pottery for Daily Use</h2>
-            <p>These water pitchers are designed for actual use—pouring water, serving beverages, or holding flowers. Wheel-thrown from brown stoneware clay, each pitcher has a pulled handle attached at the leather-hard stage. The handle placement and curve were carefully considered for comfortable pouring and grip.</p>
+            <button class="learn-more-btn" onclick="toggleDetails(this)">Learn More</button>
 
-            <h2>Shino Glaze Tradition</h2>
-            <p>Shino is one of the classic Japanese pottery glazes, traditionally wood-fired to high temperatures. This version was formulated for a gas kiln firing at Callonwalde in Atlanta. The glaze produces soft, matte surfaces with natural variations in color—from cream to orange to deep brown.</p>
+            <div class="piece-details-extended">
+                <h2>Functional Pottery for Daily Use</h2>
+                <p>These water pitchers are designed for actual use—pouring water, serving beverages, or holding flowers. Wheel-thrown from brown stoneware clay, each pitcher has a pulled handle attached at the leather-hard stage. The handle placement and curve were carefully considered for comfortable pouring and grip.</p>
 
-            <p>The iron spotting visible on these ceramic pitchers comes from the brown stoneware clay body. The iron in the clay migrates through the shino glaze during firing, creating the characteristic orange and brown spots. This interaction between clay and glaze is something you can't fully control or replicate—each piece develops its own pattern.</p>
+                <h2>Shino Glaze Tradition</h2>
+                <p>Shino is one of the classic Japanese pottery glazes, traditionally wood-fired to high temperatures. This version was formulated for a gas kiln firing at Callonwalde in Atlanta. The glaze produces soft, matte surfaces with natural variations in color—from cream to orange to deep brown.</p>
 
-            <h2>The Making</h2>
-            <p>Each pitcher was thrown individually on the wheel, then trimmed to refine the shape and add a foot ring. Handles were pulled from the same brown stoneware and attached while the clay was still workable. After the first bisque firing, multiple layers of shino glaze were applied before the final high-fire.</p>
+                <p>The iron spotting visible on these ceramic pitchers comes from the brown stoneware clay body. The iron in the clay migrates through the shino glaze during firing, creating the characteristic orange and brown spots. This interaction between clay and glaze is something you can't fully control or replicate—each piece develops its own pattern.</p>
 
-            <p>The pitchers were fired together in the same kiln load, yet they came out slightly different. Variations in glaze thickness, kiln position, and flame path all contribute to the final surface. This is the nature of handmade pottery—consistency in process, variation in result.</p>
+                <h2>The Making</h2>
+                <p>Each pitcher was thrown individually on the wheel, then trimmed to refine the shape and add a foot ring. Handles were pulled from the same brown stoneware and attached while the clay was still workable. After the first bisque firing, multiple layers of shino glaze were applied before the final high-fire.</p>
 
-            <h2>Design Intent</h2>
-            <p>The form is straightforward: a rounded body with a pronounced spout and comfortable handle. No unnecessary decoration. The beauty comes from the glaze surface, the iron spotting, and the simple functional shape. These are ceramic vessels meant to be used regularly, not just displayed.</p>
+                <p>The pitchers were fired together in the same kiln load, yet they came out slightly different. Variations in glaze thickness, kiln position, and flame path all contribute to the final surface. This is the nature of handmade pottery—consistency in process, variation in result.</p>
+
+                <h2>Design Intent</h2>
+                <p>The form is straightforward: a rounded body with a pronounced spout and comfortable handle. No unnecessary decoration. The beauty comes from the glaze surface, the iron spotting, and the simple functional shape. These are ceramic vessels meant to be used regularly, not just displayed.</p>
+            </div>
         </div>
+
+        <script>
+        function toggleDetails(button) {
+            const detailsSection = button.nextElementSibling;
+            detailsSection.classList.toggle('expanded');
+            button.textContent = detailsSection.classList.contains('expanded') ? 'Show Less' : 'Learn More';
+        }
+        </script>
     </main>
 
     <footer>
