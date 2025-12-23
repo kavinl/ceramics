@@ -119,27 +119,39 @@
                 Fired at Callonwalde, Atlanta
             </p>
 
-            <h2>High-Fire Stoneware</h2>
-            <p>This lidded jar represents the kind of functional pottery that sits at the intersection of utility and craft. Thrown on the wheel from brown stoneware, then fired to cone 10 (around 2381°F)—a temperature where clay and glaze truly fuse into a vitrified ceramic body.</p>
+            <button class="learn-more-btn" onclick="toggleDetails(this)">Learn More</button>
 
-            <h2>Alberta Slip Glaze</h2>
-            <p>The Alberta slip is made from a natural clay deposit in Alberta, Canada. When used as a glaze at high temperatures, it produces warm brown and tan surfaces with subtle variations. The glaze breaks lighter on edges and pools darker in recesses, creating depth across the form.</p>
+            <div class="piece-details-extended">
+                <h2>High-Fire Stoneware</h2>
+                <p>This lidded jar represents the kind of functional pottery that sits at the intersection of utility and craft. Thrown on the wheel from brown stoneware, then fired to cone 10 (around 2381°F)—a temperature where clay and glaze truly fuse into a vitrified ceramic body.</p>
 
-            <p>This is a slip glaze rather than a typical ceramic glaze—essentially a clay that melts and seals at high fire. The result is an earthy, understated surface that complements the brown stoneware clay body. The color palette stays in the range of natural earth tones without bright colors or heavy decoration.</p>
+                <h2>Alberta Slip Glaze</h2>
+                <p>The Alberta slip is made from a natural clay deposit in Alberta, Canada. When used as a glaze at high temperatures, it produces warm brown and tan surfaces with subtle variations. The glaze breaks lighter on edges and pools darker in recesses, creating depth across the form.</p>
 
-            <h2>The Lid</h2>
-            <p>Fitting a pottery lid properly requires careful attention during throwing and trimming. The lid for this jar was thrown separately, then trimmed to match the gallery (the recessed ring where the lid sits). A small knob was pulled and attached to make the lid easy to lift.</p>
+                <p>This is a slip glaze rather than a typical ceramic glaze—essentially a clay that melts and seals at high fire. The result is an earthy, understated surface that complements the brown stoneware clay body. The color palette stays in the range of natural earth tones without bright colors or heavy decoration.</p>
 
-            <p>The fit is snug but not tight—allowing the lid to seat securely while remaining easy to remove. This is achieved through precise measurement and trimming while the clay is leather-hard.</p>
+                <h2>The Lid</h2>
+                <p>Fitting a pottery lid properly requires careful attention during throwing and trimming. The lid for this jar was thrown separately, then trimmed to match the gallery (the recessed ring where the lid sits). A small knob was pulled and attached to make the lid easy to lift.</p>
 
-            <h2>Intended Use</h2>
-            <p>Lidded jars are versatile functional ceramics. This piece could hold dry goods in a kitchen, sit on a dresser for small items, or simply exist as a sculptural object. The cone 10 firing makes it fully vitrified and durable—these are pots meant to last and be used.</p>
+                <p>The fit is snug but not tight—allowing the lid to seat securely while remaining easy to remove. This is achieved through precise measurement and trimming while the clay is leather-hard.</p>
 
-            <h2>Making Notes</h2>
-            <p>The jar body and lid were thrown on consecutive days, allowing me to match the clay consistency and throwing rhythm. After bisque firing, the Alberta slip was applied by dipping—submerging the piece in a bucket of glaze for even coverage. The high-fire cone 10 kiln at Callonwalde in Atlanta reached temperature over a 12-hour firing cycle.</p>
+                <h2>Intended Use</h2>
+                <p>Lidded jars are versatile functional ceramics. This piece could hold dry goods in a kitchen, sit on a dresser for small items, or simply exist as a sculptural object. The cone 10 firing makes it fully vitrified and durable—these are pots meant to last and be used.</p>
 
-            <p>The entire process from wet clay to finished piece took roughly four weeks, accounting for drying time, bisque firing, glazing, and final firing schedules.</p>
+                <h2>Making Notes</h2>
+                <p>The jar body and lid were thrown on consecutive days, allowing me to match the clay consistency and throwing rhythm. After bisque firing, the Alberta slip was applied by dipping—submerging the piece in a bucket of glaze for even coverage. The high-fire cone 10 kiln at Callonwalde in Atlanta reached temperature over a 12-hour firing cycle.</p>
+
+                <p>The entire process from wet clay to finished piece took roughly four weeks, accounting for drying time, bisque firing, glazing, and final firing schedules.</p>
+            </div>
         </div>
+
+        <script>
+        function toggleDetails(button) {
+            const detailsSection = button.nextElementSibling;
+            detailsSection.classList.toggle('expanded');
+            button.textContent = detailsSection.classList.contains('expanded') ? 'Show Less' : 'Learn More';
+        }
+        </script>
     </main>
 
     <footer>

@@ -450,6 +450,59 @@ footer p {
     font-weight: 300;
 }
 
+/* Learn More Section */
+.learn-more-btn {
+    display: inline-block;
+    margin: 2rem 0 1rem;
+    padding: 0.75rem 2rem;
+    font-size: 0.9rem;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    color: var(--dark-gray);
+    background: transparent;
+    border: 1px solid var(--mid-gray);
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: 'Work Sans', sans-serif;
+}
+
+.learn-more-btn:hover {
+    color: var(--black);
+    border-color: var(--black);
+}
+
+.piece-details-extended {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: left;
+}
+
+.piece-details-extended.expanded {
+    max-height: 3000px;
+}
+
+.piece-details-extended h2 {
+    font-family: 'Cormorant', serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin: 2rem 0 1rem;
+    color: var(--black);
+}
+
+.piece-details-extended h2:first-child {
+    margin-top: 0;
+}
+
+.piece-details-extended p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--dark-gray);
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+}
+
 /* Responsive Design */
 @media (max-width: 968px) {
     .nav-content {
