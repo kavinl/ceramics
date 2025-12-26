@@ -12,17 +12,20 @@
     <meta property="og:url" content="https://kavinlam.com/">
     <meta property="og:title" content="Kavin Lam Ceramics - Handmade Pottery | Atlanta">
     <meta property="og:description" content="Atlanta-based ceramic artist creating handmade pottery, functional vessels, and sculptural forms.">
-    <meta property="og:image" content="https://kavinlam.com/images/piece-1-img1.jpeg">
+    <meta property="og:image" content="https://kavinlam.com/images/piece-1/img1.jpeg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://kavinlam.com/">
     <meta property="twitter:title" content="Kavin Lam Ceramics - Handmade Pottery | Atlanta">
     <meta property="twitter:description" content="Atlanta-based ceramic artist creating handmade pottery, functional vessels, and sculptural forms.">
-    <meta property="twitter:image" content="https://kavinlam.com/images/piece-1-img1.jpeg">
+    <meta property="twitter:image" content="https://kavinlam.com/images/piece-1/img1.jpeg">
 
     <link rel="canonical" href="https://kavinlam.com/">
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Load configuration -->
+    <script src="pieces-config.js"></script>
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -67,55 +70,40 @@
             <p>Explore handcrafted pottery and ceramics by Atlanta-based ceramic artist Kavin Lam. Each piece is wheel-thrown stoneware, combining traditional pottery techniques with contemporary design.</p>
         </div>
 
-        <div class="grid-container">
-            <!-- Piece 1 -->
-            <a href="piece-1.html" class="grid-item">
-                <div class="image-wrapper">
-                    <img src="images/piece-1-img1.jpeg" alt="Handmade ceramic floating blue jar - white stoneware pottery by Atlanta ceramic artist">
-                </div>
-                <div class="piece-info">
-                    <h3>Floating Blue Jar 2025</h3>
-                    <p>White stoneware, 2025</p>
-                </div>
-            </a>
-
-            <!-- Piece 2 -->
-            <a href="piece-2.html" class="grid-item">
-                <div class="image-wrapper">
-                    <img src="images/piece-2-img1.jpeg" alt="Handmade shino water pitchers - brown stoneware pottery with iron spotting Atlanta">
-                </div>
-                <div class="piece-info">
-                    <h3>Shino Water Pitchers 2025</h3>
-                    <p>Brown stoneware with iron spotting, 2025</p>
-                </div>
-            </a>
-
-            <!-- Piece 3 -->
-            <a href="piece-3.html" class="grid-item">
-                <div class="image-wrapper">
-                    <img src="images/piece-3-img1.jpeg" alt="Alberta lidded jar - handmade ceramic pottery brown stoneware cone 10 glaze">
-                </div>
-                <div class="piece-info">
-                    <h3>Alberta Lidded Jar</h3>
-                    <p>Brown stoneware, Cone 10 Alberta glaze, 2025</p>
-                </div>
-            </a>
-
-            <!-- Piece 4 -->
-            <a href="piece-4.html" class="grid-item">
-                <div class="image-wrapper">
-                    <img src="images/piece-4-img1.jpeg" alt="White jar with blue dot - handmade ceramic pottery brown stoneware inspired by Chinese porcelain">
-                </div>
-                <div class="piece-info">
-                    <h3>White Jar with Blue Dot 2025</h3>
-                    <p>Brown stoneware, Stan's White and Blue Cone 06, 2025</p>
-                </div>
-            </a>
+        <div class="grid-container" id="gallery-grid">
+            <!-- Pieces populated by JavaScript from pieces-config.js -->
         </div>
+
+        <script>
+        // Populate gallery grid from configuration
+        const gridContainer = document.getElementById('gallery-grid');
+        let gridHtml = '';
+
+        pieceOrder.forEach(pieceId => {
+            const piece = piecesConfig[pieceId];
+            const galleryInfo = galleryConfig[pieceId];
+
+            if (piece && galleryInfo) {
+                gridHtml += `
+                    <a href="${pieceId}.html" class="grid-item">
+                        <div class="image-wrapper">
+                            <img src="images/${pieceId}/${piece.images[0]}" alt="${piece.altTexts[0]}">
+                        </div>
+                        <div class="piece-info">
+                            <h3>${galleryInfo.displayTitle}</h3>
+                            <p>${galleryInfo.subtitle}</p>
+                        </div>
+                    </a>
+                `;
+            }
+        });
+
+        gridContainer.innerHTML = gridHtml;
+        </script>
     </main>
 
     <footer>
-        <p>&copy; 2024 Kavin Lam. All rights reserved.</p>
+        <p>&copy; 2025 Kavin Lam. All rights reserved.</p>
     </footer>
 </body>
 </html>
