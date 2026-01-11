@@ -10,7 +10,7 @@ const piecesConfig = {
         dateDisplay: 'January 15, 2025',
         material: 'White stoneware',
         glaze: 'Floating Blue Cone 06 glaze',
-        location: 'Callonwalde, Atlanta',
+        location: 'Callanwolde, Atlanta',
         images: [
             'img1.jpeg',
             'img2.jpeg',
@@ -46,7 +46,7 @@ const piecesConfig = {
             <p>The jar works as a functional vessel—for holding dried goods, as a vase, or simply as a sculptural object. The opening is wide enough for practical use but maintains a balanced proportion with the body. It's meant to have form and function.</p>
 
             <h2>Making Process</h2>
-            <p>After throwing on the wheel, the piece was trimmed to refine the foot and wall thickness. The white stoneware clay body allows the glaze color to stay true without the iron content of darker clays interfering. Multiple coats of the floating blue glaze were applied before the cone 06 firing at Callonwalde in Atlanta.</p>
+            <p>After throwing on the wheel, the piece was trimmed to refine the foot and wall thickness. The white stoneware clay body allows the glaze color to stay true without the iron content of darker clays interfering. Multiple coats of the floating blue glaze were applied before the cone 06 firing at Callanwolde in Atlanta.</p>
 
             <p>The entire ceramic process—from throwing to final firing—took approximately four weeks, allowing for proper drying times between each stage.</p>
         `
@@ -59,7 +59,7 @@ const piecesConfig = {
         dateDisplay: 'February 1, 2025',
         material: 'Brown stoneware with iron spotting',
         glaze: 'Traditional shino glaze',
-        location: 'Callonwalde, Atlanta',
+        location: 'Callanwolde, Atlanta',
         images: [
             'img1.jpeg',
             'img2.jpeg',
@@ -87,7 +87,7 @@ const piecesConfig = {
             <p>These water pitchers are designed for actual use—pouring water, serving beverages, or holding flowers. Wheel-thrown from brown stoneware clay, each pitcher has a bowed shoulder and narrowed neck. </p>
 
             <h2>Shino Glaze Tradition</h2>
-            <p>Shino is one of the classic Japanese pottery glazes, traditionally wood-fired to high temperatures. This version was fired to cone 10 at Callonwalde in Atlanta. The glaze produces glossy finish surfaces with natural variations in color—from cream to orange to deep brown--and sometimes red if you're lucky.</p>
+            <p>Shino is one of the classic Japanese pottery glazes, traditionally wood-fired to high temperatures. This version was fired to cone 10 at Callanwolde in Atlanta. The glaze produces glossy finish surfaces with natural variations in color—from cream to orange to deep brown--and sometimes red if you're lucky.</p>
 
             <p>The iron spotting visible on these ceramic pitchers comes from the brown stoneware clay body. The iron in the clay migrates through the shino glaze during firing, creating the characteristic orange and brown spots. This interaction between clay and glaze is something you can't fully control or replicate—each piece develops its own pattern.</p>
 
@@ -108,7 +108,7 @@ const piecesConfig = {
         dateDisplay: 'February 20, 2025',
         material: 'Brown stoneware',
         glaze: 'Cone 10 Alberta slip glaze',
-        location: 'Callonwalde, Atlanta',
+        location: 'Callanwolde, Atlanta',
         images: [
             'img1.jpeg',
             'img2.jpeg',
@@ -149,7 +149,7 @@ const piecesConfig = {
             <p>Lidded jars are versatile functional ceramics. This piece could hold dry goods in a kitchen, sit on a dresser for small items, or simply exist as a sculptural object. The cone 10 firing makes it fully vitrified and durable—these are pots meant to last and be used.</p>
 
             <h2>Making Notes</h2>
-            <p>The jar body and lid were thrown on the same day, allowing me to match the clay consistency and throwing rhythm. After bisque firing, the Alberta slip was applied by dipping—submerging the piece in a bucket of glaze for even coverage. The high-fire cone 10 kiln at Callonwalde in Atlanta reached temperature over a long firing cycle.</p>
+            <p>The jar body and lid were thrown on the same day, allowing me to match the clay consistency and throwing rhythm. After bisque firing, the Alberta slip was applied by dipping—submerging the piece in a bucket of glaze for even coverage. The high-fire cone 10 kiln at Callanwolde in Atlanta reached temperature over a long firing cycle.</p>
 
             <p>The entire process from wet clay to finished piece took roughly four weeks, accounting for drying time, bisque firing, glazing, and final firing schedules.</p>
         `
