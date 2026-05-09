@@ -568,3 +568,437 @@ footer p {
         font-size: 2rem;
     }
 }
+
+/* ─── Homepage Hero ─── */
+.donabe-hero {
+    min-height: calc(100vh - 72px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8rem 2rem 6rem;
+    background-color: #F7F2EC;
+    text-align: center;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.donabe-hero-inner {
+    max-width: 640px;
+}
+
+.hero-eyebrow {
+    font-size: 0.78rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #9B7E65;
+    margin-bottom: 1.5rem;
+}
+
+.hero-headline {
+    font-family: 'Cormorant', serif;
+    font-size: 5rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    line-height: 1.05;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+}
+
+.hero-sub {
+    font-size: 1.05rem;
+    font-weight: 300;
+    color: var(--dark-gray);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.hero-details {
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: var(--mid-gray);
+    letter-spacing: 0.5px;
+    margin-bottom: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.hero-divider {
+    color: var(--light-gray);
+}
+
+.hero-cta {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background-color: var(--black);
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: var(--transition);
+}
+
+.hero-cta:hover {
+    background-color: var(--dark-gray);
+}
+
+/* ─── Work Section (below hero on homepage) ─── */
+.work-section {
+    padding: 5rem 0 4rem;
+}
+
+.work-section-header {
+    text-align: center;
+    padding: 0 2rem 3rem;
+}
+
+.work-section-header h2 {
+    font-family: 'Cormorant', serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: var(--mid-gray);
+    text-transform: uppercase;
+}
+
+/* ─── Donabe Page ─── */
+.donabe-page {
+    padding-top: 5rem;
+}
+
+.donabe-intro {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+}
+
+.donabe-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.donabe-visual svg {
+    width: 100%;
+    max-width: 380px;
+    background-color: #F2EBE0;
+    border-radius: 4px;
+    padding: 2rem;
+}
+
+.visual-caption {
+    margin-top: 1rem;
+    font-size: 0.78rem;
+    font-weight: 300;
+    color: var(--mid-gray);
+    letter-spacing: 0.5px;
+    font-style: italic;
+}
+
+.donabe-eyebrow {
+    font-size: 0.78rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #9B7E65;
+    margin-bottom: 1rem;
+}
+
+.donabe-intro-text h1 {
+    font-family: 'Cormorant', serif;
+    font-size: 3.5rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    color: var(--black);
+}
+
+.donabe-lead {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--dark-gray);
+    font-weight: 300;
+    margin-bottom: 1.25rem;
+}
+
+.donabe-intro-text p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--dark-gray);
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.donabe-specs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem 2rem;
+    border-top: 1px solid var(--light-gray);
+    padding-top: 2rem;
+}
+
+.spec {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.spec-label {
+    font-size: 0.72rem;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--mid-gray);
+}
+
+.spec-value {
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: var(--black);
+}
+
+/* ─── Process Steps ─── */
+.donabe-process {
+    background-color: #F7F2EC;
+    padding: 5rem 3rem;
+    text-align: center;
+}
+
+.donabe-process h2 {
+    font-family: 'Cormorant', serif;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-bottom: 3rem;
+    color: var(--black);
+}
+
+.process-steps {
+    max-width: 960px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    text-align: left;
+}
+
+.process-step {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.step-num {
+    font-size: 0.72rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: #9B7E65;
+}
+
+.process-step h3 {
+    font-family: 'Cormorant', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--black);
+}
+
+.process-step p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--dark-gray);
+    font-weight: 300;
+}
+
+/* ─── Order Form ─── */
+.order-section {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 5rem 3rem 6rem;
+}
+
+.order-header {
+    margin-bottom: 3rem;
+}
+
+.order-header h2 {
+    font-family: 'Cormorant', serif;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-bottom: 0.75rem;
+    color: var(--black);
+}
+
+.order-header p {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--dark-gray);
+    line-height: 1.7;
+}
+
+.order-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group-full {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--dark-gray);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--light-gray);
+    background-color: var(--off-white);
+    font-family: 'Work Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--black);
+    outline: none;
+    transition: border-color 0.2s ease;
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--dark-gray);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-submit {
+    align-self: flex-start;
+    padding: 1rem 2.5rem;
+    background-color: var(--black);
+    color: var(--white);
+    border: none;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.form-submit:hover {
+    background-color: var(--dark-gray);
+}
+
+.form-note {
+    margin-top: 1.5rem;
+    font-size: 0.82rem;
+    font-weight: 300;
+    color: var(--mid-gray);
+}
+
+.form-note a {
+    color: var(--dark-gray);
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.form-note a:hover {
+    color: var(--black);
+}
+
+.submission-thanks {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.submission-thanks h2 {
+    font-family: 'Cormorant', serif;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.submission-thanks p {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--dark-gray);
+    line-height: 1.7;
+}
+
+/* ─── Donabe Page Responsive ─── */
+@media (max-width: 968px) {
+    .hero-headline {
+        font-size: 3.5rem;
+    }
+
+    .donabe-intro {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding: 4rem 2rem;
+    }
+
+    .donabe-visual svg {
+        max-width: 300px;
+    }
+
+    .process-steps {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: left;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .order-section {
+        padding: 4rem 2rem;
+    }
+
+    .donabe-process {
+        padding: 4rem 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-headline {
+        font-size: 2.8rem;
+    }
+
+    .donabe-specs {
+        grid-template-columns: 1fr;
+    }
+}
