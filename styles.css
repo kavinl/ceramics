@@ -984,180 +984,72 @@ footer p {
    claypot page
    ═══════════════════════════════════════════════ */
 
-:root {
-    --terra: #C97B5A;
-    --cream: #F5EFE6;
-}
-
-.claypot-page {
-    padding-top: 5rem;
-}
-
-/* eyebrow label */
-.cp-eyebrow {
-    font-size: 0.75rem;
-    font-weight: 400;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--terra);
-    margin-bottom: 1rem;
-}
-
-/* ─── Hero ─── */
-.cp-hero {
-    background: var(--cream);
-    border-bottom: 1px solid var(--light-gray);
-}
-
-.cp-hero-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 6rem 3rem 5rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-}
-
-.cp-headline {
-    font-family: 'Cormorant', serif;
-    font-size: 4rem;
-    font-weight: 300;
-    letter-spacing: 1px;
-    color: var(--black);
-    margin-bottom: 1.25rem;
-    line-height: 1.1;
-}
-
-.cp-subhook {
-    font-size: 1rem;
-    font-weight: 300;
-    color: var(--dark-gray);
-    line-height: 1.8;
-    margin-bottom: 2.5rem;
-    max-width: 480px;
-}
-
-.cp-hero-svg {
-    width: 100%;
-    max-width: 360px;
-    display: block;
-    margin: 0 auto;
-}
-
-/* ─── CTA buttons ─── */
-.cp-btn {
-    display: inline-block;
-    padding: 0.85rem 1.75rem;
-    border: 1px solid var(--terra);
-    color: var(--terra);
-    background: transparent;
-    text-decoration: none;
-    font-family: 'Work Sans', sans-serif;
-    font-size: 0.82rem;
-    font-weight: 400;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    transition: background 0.25s ease, color 0.25s ease;
-}
-
-.cp-btn:hover {
-    background: var(--terra);
-    color: var(--white);
-}
-
-.cp-btn--solid {
-    background: var(--terra);
-    color: var(--white);
-}
-
-.cp-btn--solid:hover {
-    background: #b36040;
-    border-color: #b36040;
-}
-
-/* ─── Sections ─── */
-.cp-section {
-    padding: 5.5rem 3rem;
-}
-
-.cp-section--cream {
-    background: var(--cream);
-    border-top: 1px solid var(--light-gray);
-    border-bottom: 1px solid var(--light-gray);
-}
-
-.cp-section-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.cp-section-inner--narrow {
-    max-width: 720px;
-}
-
-.cp-section-title {
-    font-family: 'Cormorant', serif;
-    font-size: 2.5rem;
-    font-weight: 300;
-    letter-spacing: 1px;
-    color: var(--black);
-    margin-bottom: 2.5rem;
+/* white-bg sections — same padding as .donabe-process, no off-white fill */
+.cp-white-section {
+    padding: 5rem 3rem;
     text-align: center;
 }
 
-.cp-body {
-    font-size: 1rem;
+.cp-white-section-inner {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* narrow prose wrapper for text inside .donabe-process */
+.cp-prose {
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.cp-prose p {
+    font-size: 0.95rem;
     line-height: 1.85;
     font-weight: 300;
     color: var(--dark-gray);
     margin-bottom: 1.5rem;
 }
 
-.cp-placeholder {
-    color: var(--mid-gray);
-    font-style: italic;
-    border-left: 2px solid var(--terra);
-    padding-left: 1rem;
-    margin-top: 0.5rem;
+.cp-prose p:last-child {
+    margin-bottom: 0;
 }
 
-/* ─── Icon stamp ─── */
+.cp-placeholder {
+    font-style: italic;
+    color: var(--mid-gray);
+    border-left: 1px solid var(--light-gray);
+    padding-left: 1rem;
+}
+
+/* icon stamp — circle containing a 28px SVG icon */
 .cp-icon-stamp {
-    width: 64px;
-    height: 64px;
+    width: 56px;
+    height: 56px;
     border-radius: 50%;
-    background: var(--off-white);
-    border: 1px solid var(--terra);
+    border: 1px solid var(--light-gray);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
     color: var(--dark-gray);
+    margin: 0 auto 1.25rem;
 }
 
-/* ─── Benefits grid ─── */
+/* benefits — 4-col, mirrors .process-steps proportions */
 .cp-benefits {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2.5rem;
-    margin-top: 1rem;
-}
-
-.cp-benefit {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 1rem;
+    gap: 3rem;
+    text-align: left;
 }
 
 .cp-benefit-title {
     font-family: 'Cormorant', serif;
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     font-weight: 400;
     letter-spacing: 0.5px;
     color: var(--black);
+    margin-bottom: 0.5rem;
 }
 
 .cp-benefit-body {
@@ -1167,26 +1059,25 @@ footer p {
     color: var(--dark-gray);
 }
 
-/* ─── Recipe cards ─── */
+/* recipes — 3-col, open cards with top border only */
 .cp-recipes {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: 1rem;
+    gap: 3rem;
+    text-align: left;
 }
 
 .cp-recipe-card {
-    border: 1px solid var(--light-gray);
-    padding: 2rem;
+    border-top: 1px solid var(--light-gray);
+    padding-top: 2rem;
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
-    background: var(--off-white);
+    gap: 0.6rem;
 }
 
 .cp-recipe-name {
     font-family: 'Cormorant', serif;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 400;
     color: var(--black);
     letter-spacing: 0.5px;
@@ -1197,12 +1088,7 @@ footer p {
     font-weight: 300;
     color: var(--mid-gray);
     line-height: 1.6;
-    padding-bottom: 0.75rem;
-    border-bottom: 1px solid var(--light-gray);
-}
-
-.cp-recipe-body {
-    flex: 1;
+    margin-bottom: 0.5rem;
 }
 
 .cp-recipe-label {
@@ -1210,18 +1096,18 @@ footer p {
     font-weight: 400;
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    color: var(--terra);
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
+    color: var(--mid-gray);
+    margin-top: 0.75rem;
+    margin-bottom: 0.4rem;
 }
 
 .cp-recipe-list,
 .cp-recipe-steps {
-    font-size: 0.88rem;
+    font-size: 0.87rem;
     font-weight: 300;
     color: var(--dark-gray);
-    line-height: 1.7;
-    padding-left: 1.25rem;
+    line-height: 1.75;
+    padding-left: 1.2rem;
 }
 
 .cp-recipe-list li,
@@ -1229,23 +1115,24 @@ footer p {
     margin-bottom: 0.3rem;
 }
 
-/* ─── Care list ─── */
+/* care list — em-dash bullets, left-aligned inside centered section */
 .cp-care-list {
     list-style: none;
     padding: 0;
+    max-width: 580px;
+    margin: 0 auto;
+    text-align: left;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    max-width: 720px;
-    margin: 0 auto;
 }
 
 .cp-care-list li {
-    font-size: 0.95rem;
+    font-size: 0.93rem;
     font-weight: 300;
     color: var(--dark-gray);
     line-height: 1.7;
-    padding-left: 1.75rem;
+    padding-left: 1.5rem;
     position: relative;
 }
 
@@ -1253,89 +1140,59 @@ footer p {
     content: '—';
     position: absolute;
     left: 0;
-    color: var(--terra);
+    color: var(--mid-gray);
 }
 
-/* ─── Closing CTA ─── */
-.cp-cta-section {
-    padding: 7rem 3rem;
+/* closing CTA section */
+.cp-closing {
     text-align: center;
+    padding: 5rem 3rem 6rem;
 }
 
-.cp-cta-headline {
+.cp-closing h2 {
     font-family: 'Cormorant', serif;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 300;
     letter-spacing: 1px;
-    color: var(--black);
     margin-bottom: 2rem;
+    color: var(--black);
+}
+
+/* black filled CTA link — matches .form-submit visual weight */
+.cp-cta-btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background-color: var(--black);
+    color: var(--white);
+    text-decoration: none;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: var(--transition);
+}
+
+.cp-cta-btn:hover {
+    background-color: var(--dark-gray);
 }
 
 /* ─── Claypot Responsive ─── */
 @media (max-width: 1024px) {
-    .cp-benefits {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    .cp-benefits { grid-template-columns: repeat(2, 1fr); }
+    .cp-recipes  { grid-template-columns: repeat(2, 1fr); }
+}
 
-    .cp-recipes {
-        grid-template-columns: repeat(2, 1fr);
-    }
+@media (max-width: 968px) {
+    .cp-white-section { padding: 4rem 2rem; }
 }
 
 @media (max-width: 768px) {
-    .cp-hero-inner {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-        padding: 4rem 1.5rem 3rem;
-        text-align: center;
-    }
-
-    .cp-headline {
-        font-size: 2.8rem;
-    }
-
-    .cp-subhook {
-        max-width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .cp-hero-art {
-        order: -1;
-    }
-
-    .cp-section {
-        padding: 4rem 1.5rem;
-    }
-
-    .cp-section-title {
-        font-size: 2rem;
-    }
-
-    .cp-benefits {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-    }
-
-    .cp-recipes {
-        grid-template-columns: 1fr;
-    }
-
-    .cp-cta-section {
-        padding: 5rem 1.5rem;
-    }
-
-    .cp-cta-headline {
-        font-size: 2rem;
-    }
+    .cp-benefits { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+    .cp-recipes  { grid-template-columns: 1fr; }
+    .cp-closing  { padding: 4rem 1.5rem 5rem; }
 }
 
 @media (max-width: 480px) {
-    .cp-benefits {
-        grid-template-columns: 1fr;
-    }
-
-    .cp-headline {
-        font-size: 2.2rem;
-    }
+    .cp-benefits { grid-template-columns: 1fr; }
 }
