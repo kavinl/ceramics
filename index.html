@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kavin Lam Ceramics — Handmade Clay Pots | Atlanta</title>
-  <meta name="description" content="Atlanta-based ceramic artist creating handmade clay pots rooted in Cantonese claypot rice tradition. Made to order, $250–500.">
-  <meta name="keywords" content="ceramics, pottery, Atlanta ceramics, handmade clay pot, claypot rice, ceramic artist, stoneware, functional pottery, donabe">
+  <title>Kavin Lam Ceramics — Handmade Clay Pots | Brooklyn</title>
+  <meta name="description" content="Brooklyn-based ceramic artist creating handmade clay pots rooted in Cantonese claypot rice tradition. Made to order, $250–500.">
+  <meta name="keywords" content="ceramics, pottery, Brooklyn ceramics, handmade clay pot, claypot rice, ceramic artist, stoneware, functional pottery, donabe">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ceramics.kavinlam.com/">
-  <meta property="og:title" content="Kavin Lam Ceramics — Handmade Clay Pots | Atlanta">
-  <meta property="og:description" content="Custom handmade donabe, wheel-thrown in Atlanta. Made to order, $250–500.">
+  <meta property="og:title" content="Kavin Lam Ceramics — Handmade Clay Pots | Brooklyn">
+  <meta property="og:description" content="Custom handmade donabe, wheel-thrown in Brooklyn. Made to order, $250–500.">
   <meta property="og:image" content="https://ceramics.kavinlam.com/images/piece-1/img1.jpeg">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://ceramics.kavinlam.com/">
-  <meta name="twitter:title" content="Kavin Lam Ceramics — Handmade Clay Pots | Atlanta">
-  <meta name="twitter:description" content="Custom handmade donabe, wheel-thrown in Atlanta. Made to order, $250–500.">
+  <meta name="twitter:title" content="Kavin Lam Ceramics — Handmade Clay Pots | Brooklyn">
+  <meta name="twitter:description" content="Custom handmade donabe, wheel-thrown in Brooklyn. Made to order, $250–500.">
   <meta name="twitter:image" content="https://ceramics.kavinlam.com/images/piece-1/img1.jpeg">
 
   <link rel="canonical" href="https://ceramics.kavinlam.com/">
@@ -31,12 +31,12 @@
     "@type": "Person",
     "name": "Kavin Lam",
     "jobTitle": "Ceramic Artist",
-    "description": "Atlanta-based ceramic artist specializing in handmade donabe and functional pottery",
+    "description": "Brooklyn-based ceramic artist specializing in handmade donabe and functional pottery",
     "url": "https://ceramics.kavinlam.com",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Atlanta",
-      "addressRegion": "GA"
+      "addressLocality": "Brooklyn",
+      "addressRegion": "NY"
     },
     "sameAs": ["https://instagram.com/kavin.ceramics"]
   }
@@ -180,21 +180,22 @@
       content: '';
       position: absolute;
       top: 50%; left: 50%;
-      width: 80vmin; height: 80vmin;
-      transform: translate(-50%,-50%);
-      background: conic-gradient(from 0deg,
-        transparent 0%,
-        rgba(184,103,78,.18) 25%,
-        transparent 50%,
-        rgba(184,103,78,.18) 75%,
-        transparent 100%);
+      width: 90vmin; height: 90vmin;
+      transform: translate(-50%, -50%);
+      /* two soft radial glows — no conic, no rotation, no spiral artifact */
+      background:
+        radial-gradient(ellipse at 62% 38%, rgba(184,103,78,.16) 0%, transparent 60%),
+        radial-gradient(ellipse at 34% 68%, rgba(168,196,154,.10) 0%, transparent 55%);
       border-radius: 50%;
-      filter: blur(60px);
+      filter: blur(48px);
       z-index: -1;
-      animation: wheel-spin 90s linear infinite;
       pointer-events: none;
+      animation: hero-glow 14s ease-in-out infinite;
     }
-    @keyframes wheel-spin { to { transform: translate(-50%,-50%) rotate(360deg); } }
+    @keyframes hero-glow {
+      0%,100% { opacity: .8; transform: translate(-50%,-50%) scale(1);   }
+      50%     { opacity: 1;  transform: translate(-50%,-50%) scale(1.06); }
+    }
 
     .hero-text .eyebrow { margin-bottom: 1.5rem; display: block; }
     .hero h1 {
@@ -327,19 +328,20 @@
 
     @keyframes pot-bob-berry {
       0%,100% { transform: translateY(8px)   rotate(-3deg); }
-      50%     { transform: translateY(-2px)  rotate(-3deg); }
+      50%     { transform: translateY(3px)   rotate(-3deg); }
     }
     @keyframes pot-bob-tangerine {
       0%,100% { transform: translateY(-12px) rotate(0deg); }
-      50%     { transform: translateY(-22px) rotate(0deg); }
+      50%     { transform: translateY(-17px) rotate(0deg); }
     }
     @keyframes pot-bob-matcha {
       0%,100% { transform: translateY(6px)   rotate(2.5deg); }
-      50%     { transform: translateY(-4px)  rotate(2.5deg); }
+      50%     { transform: translateY(1px)   rotate(2.5deg); }
     }
-    .claypot-img--berry     { animation: pot-bob-berry     7s ease-in-out infinite; }
-    .claypot-img--tangerine { animation: pot-bob-tangerine 8s ease-in-out infinite .4s; }
-    .claypot-img--matcha    { animation: pot-bob-matcha    9s ease-in-out infinite .8s; }
+    /* slowed to 14–18s for a calm, gentle float */
+    .claypot-img--berry     { animation: pot-bob-berry     14s ease-in-out infinite; }
+    .claypot-img--tangerine { animation: pot-bob-tangerine 16s ease-in-out infinite .8s; }
+    .claypot-img--matcha    { animation: pot-bob-matcha    18s ease-in-out infinite 1.6s; }
 
     .hero-art:hover .claypot-img--berry     { animation-play-state: paused; transform: translateY(4px)   rotate(-5deg); }
     .hero-art:hover .claypot-img--tangerine { animation-play-state: paused; transform: translateY(-18px) rotate(0deg); }
@@ -674,7 +676,7 @@
       <span class="word" style="--i:5"><em>haul.</em></span>
     </h1>
     <p class="lede" data-reveal>
-      Wheel-thrown stoneware donabe — a single rounded vessel, made in Atlanta, fired to cone&nbsp;10. One at a time, signed underfoot, shipped in straw.
+      Wheel-thrown stoneware donabe — a single rounded vessel, made in Brooklyn, fired to cone&nbsp;10. One at a time, signed underfoot, shipped in straw.
     </p>
     <div class="cta-row" data-reveal>
       <a href="order.html" class="btn" data-magnetic>Order a claypot →</a>
@@ -691,7 +693,7 @@
       </div>
       <div>
         <span>made in</span>
-        <b>Atlanta, GA</b>
+        <b>Brooklyn, NY</b>
       </div>
     </div>
   </div>
@@ -794,7 +796,7 @@
 
 <!-- ── Footer ──────────────────────────────────────── -->
 <footer class="page foot">
-  <div>© 2025 Kavin Lam · made in Atlanta</div>
+  <div>© 2025 Kavin Lam · made in Brooklyn</div>
   <div>
     <a href="contact.html" class="link-arrow">contact</a>
   </div>
