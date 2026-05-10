@@ -1,157 +1,343 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order a Custom Clay Pot - Kavin Lam Ceramics | Brooklyn</title>
-    <meta name="description" content="Order a handmade custom clay pot from Brooklyn ceramic artist Kavin Lam. Wheel-thrown stoneware clay pots made to order, $250–500. Rooted in Cantonese claypot rice tradition.">
-    <meta name="keywords" content="custom clay pot, handmade claypot, Cantonese claypot rice, ceramic clay pot Brooklyn, order pottery, custom ceramics Brooklyn, donabe style pot">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order a Custom Clay Pot - Kavin Lam Ceramics | Brooklyn</title>
+  <meta name="description" content="Order a handmade custom clay pot from Brooklyn ceramic artist Kavin Lam. Wheel-thrown stoneware clay pots made to order, $250–500. Rooted in Cantonese claypot rice tradition.">
+  <meta name="keywords" content="custom clay pot, handmade claypot, Cantonese claypot rice, ceramic clay pot Brooklyn, order pottery, custom ceramics Brooklyn, donabe style pot">
 
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ceramics.kavinlam.com/order.html">
-    <meta property="og:title" content="Order a Custom Clay Pot - Kavin Lam Ceramics">
-    <meta property="og:description" content="Handmade custom clay pots, wheel-thrown in Brooklyn. Made to order, $250–500. Rooted in Cantonese claypot rice tradition.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ceramics.kavinlam.com/order.html">
+  <meta property="og:title" content="Order a Custom Clay Pot - Kavin Lam Ceramics">
+  <meta property="og:description" content="Handmade custom clay pots, wheel-thrown in Brooklyn. Made to order, $250–500. Rooted in Cantonese claypot rice tradition.">
 
-    <link rel="canonical" href="https://ceramics.kavinlam.com/order.html">
-    <link rel="stylesheet" href="styles.css">
+  <link rel="canonical" href="https://ceramics.kavinlam.com/order.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Work+Sans:wght@300;400&display=swap" rel="stylesheet">
+
+  <style>
+:root {
+  --paper:#FAFAFA; --warm-tint:#F8F4EE; --ink:#1A1A1A; --ink-soft:#333;
+  --muted:#999; --hairline:#E8E8E8; --kiln:#B8674E; --kiln-deep:#8E4A36;
+  --teal:#5FA39E; --matcha:#A8C49A;
+  --font-display:'Cormorant Garamond','Cormorant',Georgia,serif;
+  --font-sans:'Work Sans',-apple-system,sans-serif;
+  --dur-quick:240ms; --dur-base:400ms; --dur-slow:700ms;
+  --ease-entrance:cubic-bezier(.16,1,.3,1);
+  --ease-standard:cubic-bezier(.4,0,.2,1);
+  --ease-organic:cubic-bezier(.45,0,.55,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{overflow-x:clip}
+body{background:var(--warm-tint);color:var(--ink);font-family:var(--font-sans);
+  font-weight:300;-webkit-font-smoothing:antialiased;line-height:1.6;overflow-x:clip}
+a{color:inherit;text-decoration:none}
+.page{max-width:1400px;margin:0 auto;padding:0 9rem}
+.eyebrow{font-size:.72rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-weight:400}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 9rem;
+  border-bottom:1px solid var(--hairline);background:rgba(248,244,238,.92);
+  backdrop-filter:blur(10px);position:sticky;top:0;z-index:50}
+.brand{font-family:var(--font-display);font-size:1.25rem;letter-spacing:.5px;font-weight:400}
+.nav-links{display:flex;gap:2.5rem;font-size:.78rem;letter-spacing:1.5px;
+  text-transform:uppercase;color:var(--ink-soft)}
+.nav-links a{transition:color var(--dur-quick) var(--ease-standard)}
+.nav-links a:hover,.nav-links a.active{color:var(--ink)}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;
+  border:none;cursor:pointer;padding:4px}
+.nav-hamburger span{display:block;width:22px;height:1px;background:var(--ink);
+  transition:transform var(--dur-base) var(--ease-standard),opacity var(--dur-base) var(--ease-standard)}
+.nav-hamburger.is-open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.nav-hamburger.is-open span:nth-child(2){opacity:0}
+.nav-hamburger.is-open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.nav-mobile-drawer{display:none;position:fixed;inset:0;background:var(--warm-tint);
+  z-index:49;padding:6rem 2rem 2rem;flex-direction:column;gap:2rem}
+.nav-mobile-drawer.is-open{display:flex}
+.nav-mobile-drawer a{font-size:2rem;font-family:var(--font-display);font-weight:300;
+  color:var(--ink);border-bottom:1px solid var(--hairline);padding-bottom:1.25rem}
+.btn{display:inline-block;padding:1rem 2rem;background:var(--ink);color:var(--paper);
+  font-size:.74rem;letter-spacing:1.8px;text-transform:uppercase;border:1px solid var(--ink);
+  cursor:pointer;transition:background var(--dur-quick) var(--ease-standard),
+  color var(--dur-quick) var(--ease-standard),border-color var(--dur-quick) var(--ease-standard)}
+.btn:hover{background:var(--kiln-deep);border-color:var(--kiln-deep)}
+.link-arrow{font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--ink);position:relative;padding-bottom:4px}
+.link-arrow::after{content:'';position:absolute;left:0;bottom:0;height:1px;width:100%;
+  background:currentColor;transform-origin:left center;
+  transition:transform var(--dur-base) var(--ease-standard)}
+.link-arrow:hover{color:var(--kiln)}
+.link-arrow:hover::after{transform-origin:right center;transform:scaleX(0)}
+.foot{padding:3rem 0 2rem;display:flex;justify-content:space-between;align-items:center;
+  font-size:.74rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);
+  border-top:1px solid var(--hairline);margin-top:4rem}
+[data-reveal]{opacity:0;transform:translateY(20px);
+  transition:opacity var(--dur-slow) var(--ease-entrance),transform var(--dur-slow) var(--ease-entrance)}
+[data-reveal].is-revealed{opacity:1;transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+  [data-reveal]{opacity:1;transform:none}}
+@media(max-width:1200px){.page{padding:0 6rem}.nav{padding:1.5rem 6rem}}
+@media(max-width:960px){.page{padding:0 3.5rem}.nav{padding:1.5rem 3.5rem}}
+@media(max-width:640px){
+  .page{padding:0 1.75rem}.nav{padding:1rem 1.75rem}
+  .nav-links{display:none}.nav-hamburger{display:flex}
+  .foot{flex-direction:column;gap:.75rem;align-items:flex-start;padding:2rem 0 1.5rem}}
+@media(max-width:400px){.page{padding:0 1.25rem}.nav{padding:1rem 1.25rem}}
+
+/* ═══════════════════════════════════════════════
+   order page content styles (from styles.css)
+   ═══════════════════════════════════════════════ */
+.donabe-page{padding-top:0}
+
+/* ─── Intro 2-col ─── */
+.donabe-intro{max-width:1200px;margin:0 auto;padding:5rem 3rem;
+  display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
+.donabe-visual{display:flex;flex-direction:column;align-items:center}
+.donabe-visual img{background-color:var(--paper);border:1px solid var(--hairline);padding:2rem}
+.visual-caption{margin-top:1rem;font-size:.78rem;font-weight:300;color:var(--muted);
+  letter-spacing:.5px;font-style:italic}
+
+/* ─── Eyebrow ─── */
+.donabe-eyebrow{font-size:.78rem;font-weight:400;letter-spacing:2px;text-transform:uppercase;
+  color:var(--muted);margin-bottom:1rem}
+
+/* ─── Intro text ─── */
+.donabe-intro-text h1{font-family:var(--font-display);font-size:3.5rem;font-weight:300;
+  letter-spacing:1px;margin-bottom:1.5rem;color:var(--ink)}
+.donabe-lead{font-size:1.05rem;line-height:1.8;color:var(--ink-soft);font-weight:300;margin-bottom:1.25rem}
+.donabe-intro-text p{font-size:.95rem;line-height:1.8;color:var(--ink-soft);font-weight:300;margin-bottom:2rem}
+
+/* ─── Specs grid ─── */
+.donabe-specs{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem 2rem;
+  border-top:1px solid var(--hairline);padding-top:2rem}
+.spec{display:flex;flex-direction:column;gap:.25rem}
+.spec-label{font-size:.72rem;font-weight:400;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
+.spec-value{font-size:.95rem;font-weight:300;color:var(--ink)}
+
+/* ─── Process band ─── */
+.donabe-process{background-color:var(--paper);border-top:1px solid var(--hairline);
+  border-bottom:1px solid var(--hairline);padding:5rem 3rem;text-align:center}
+.donabe-process h2{font-family:var(--font-display);font-size:2rem;font-weight:300;
+  letter-spacing:1px;margin-bottom:3rem;color:var(--ink)}
+.process-steps{max-width:960px;margin:0 auto;display:grid;
+  grid-template-columns:repeat(3,1fr);gap:3rem;text-align:left}
+.process-step{display:flex;flex-direction:column;gap:.75rem}
+.step-num{font-size:.72rem;font-weight:400;letter-spacing:2px;color:var(--muted)}
+.process-step h3{font-family:var(--font-display);font-size:1.3rem;font-weight:400;color:var(--ink)}
+.process-step p{font-size:.9rem;line-height:1.7;color:var(--ink-soft);font-weight:300}
+
+/* ─── Order form section ─── */
+.order-section{max-width:720px;margin:0 auto;padding:5rem 3rem 6rem}
+.order-header{margin-bottom:3rem}
+.order-header h2{font-family:var(--font-display);font-size:2rem;font-weight:300;
+  letter-spacing:1px;margin-bottom:.75rem;color:var(--ink)}
+.order-header p{font-size:.9rem;font-weight:300;color:var(--ink-soft);line-height:1.7}
+.order-form{display:flex;flex-direction:column;gap:1.5rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.form-group{display:flex;flex-direction:column;gap:.5rem}
+.form-group-full{grid-column:1/-1}
+.form-group label{font-size:.75rem;font-weight:400;letter-spacing:1px;
+  text-transform:uppercase;color:var(--ink-soft)}
+.form-group input,
+.form-group select,
+.form-group textarea{width:100%;padding:.85rem 1rem;border:1px solid var(--hairline);
+  background-color:var(--paper);font-family:var(--font-sans);font-size:.9rem;
+  font-weight:300;color:var(--ink);outline:none;
+  transition:border-color .2s ease;-webkit-appearance:none;border-radius:0}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{border-color:var(--ink-soft)}
+.form-group textarea{resize:vertical;min-height:120px}
+.form-submit{align-self:flex-start;padding:1rem 2.5rem;background-color:var(--ink);
+  color:var(--paper);border:none;font-family:var(--font-sans);font-size:.85rem;
+  font-weight:300;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;
+  transition:background var(--dur-quick) var(--ease-standard)}
+.form-submit:hover{background-color:var(--kiln-deep)}
+.form-note{margin-top:1.5rem;font-size:.82rem;font-weight:300;color:var(--muted)}
+.form-note a{color:var(--ink-soft);text-decoration:underline;transition:color .2s ease}
+.form-note a:hover{color:var(--ink)}
+
+/* ─── Order responsive ─── */
+@media(max-width:968px){
+  .donabe-intro{grid-template-columns:1fr;gap:3rem;padding:4rem 2rem}
+  .process-steps{grid-template-columns:1fr;gap:2rem}
+  .form-row{grid-template-columns:1fr}
+  .order-section{padding:4rem 2rem}
+  .donabe-process{padding:4rem 2rem}
+}
+@media(max-width:768px){.donabe-specs{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
-    <nav class="main-nav">
-        <div class="nav-content">
-            <a href="index.html" class="logo">Kavin Lam</a>
-            <div class="nav-links">
-                <a href="index.html">Work</a>
-                <a href="about.html">About</a>
-                <a href="claypot.html">Claypot</a>
-                <a href="order.html" class="active">Order</a>
-                <a href="contact.html">Contact</a>
-            </div>
+
+<nav class="nav">
+  <a href="index.html" class="brand">Kavin Lam</a>
+  <div class="nav-links">
+    <a href="claypot.html">claypot</a>
+    <a href="index.html#vessels">vessels</a>
+    <a href="commissions.html">commissions</a>
+    <a href="about.html">about</a>
+    <a href="order.html" class="active">order</a>
+  </div>
+  <button class="nav-hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="nav-mobile-drawer">
+  <a href="claypot.html">Claypot</a>
+  <a href="index.html#vessels">Vessels</a>
+  <a href="commissions.html">Commissions</a>
+  <a href="about.html">About</a>
+  <a href="order.html">Order</a>
+</div>
+
+<main class="donabe-page">
+
+  <div class="donabe-intro" data-reveal>
+    <div class="donabe-visual">
+      <img src="assets/claypot-D-sleepy-matcha.svg" alt="Sleepy matcha-green donabe pot" style="width:100%;max-width:280px;display:block;margin:0 auto;">
+    </div>
+
+    <div class="donabe-intro-text">
+      <p class="donabe-eyebrow">Made to Order · Brooklyn, New York</p>
+      <h1>Custom Clay Pot</h1>
+      <p class="donabe-lead">Growing up Cantonese, claypot rice was a constant — rice, lap cheong, chicken, a dark pour of soy sauce, cooked together over high heat until the bottom crust crackled. The pot did the work. That's the point of a clay pot.</p>
+      <p>What I make is a wheel-thrown stoneware vessel in the same spirit — thick walls, a domed lid, wide enough to cook for a table. Similar in form to a Japanese donabe, but the tradition I'm drawing from is 煲仔飯. Each pot is made to order in Brooklyn, glazed to your preference, and built to cook with.</p>
+      <div class="donabe-specs">
+        <div class="spec">
+          <span class="spec-label">Price</span>
+          <span class="spec-value">$250 – $500</span>
         </div>
-    </nav>
-
-    <main class="donabe-page">
-
-        <div class="donabe-intro">
-            <div class="donabe-visual">
-                <img src="assets/claypot-D-sleepy-matcha.svg" alt="Sleepy matcha-green donabe pot" style="width:100%;max-width:280px;display:block;margin:0 auto;">
-            </div>
-
-            <div class="donabe-intro-text">
-                <p class="donabe-eyebrow">Made to Order · Brooklyn, New York</p>
-                <h1>Custom Clay Pot</h1>
-                <p class="donabe-lead">Growing up Cantonese, claypot rice was a constant — rice, lap cheong, chicken, a dark pour of soy sauce, cooked together over high heat until the bottom crust crackled. The pot did the work. That's the point of a clay pot.</p>
-                <p>What I make is a wheel-thrown stoneware vessel in the same spirit — thick walls, a domed lid, wide enough to cook for a table. Similar in form to a Japanese donabe, but the tradition I'm drawing from is 煲仔飯. Each pot is made to order in Brooklyn, glazed to your preference, and built to cook with.</p>
-                <div class="donabe-specs">
-                    <div class="spec">
-                        <span class="spec-label">Price</span>
-                        <span class="spec-value">$250 – $500</span>
-                    </div>
-                    <div class="spec">
-                        <span class="spec-label">Lead Time</span>
-                        <span class="spec-value">6 – 8 weeks</span>
-                    </div>
-                    <div class="spec">
-                        <span class="spec-label">Sizes</span>
-                        <span class="spec-value">Small · Medium · Large</span>
-                    </div>
-                    <div class="spec">
-                        <span class="spec-label">Made in</span>
-                        <span class="spec-value">Brooklyn, New York</span>
-                    </div>
-                </div>
-            </div>
+        <div class="spec">
+          <span class="spec-label">Lead Time</span>
+          <span class="spec-value">6 – 8 weeks</span>
         </div>
-
-        <div class="donabe-process">
-            <h2>What to Expect</h2>
-            <div class="process-steps">
-                <div class="process-step">
-                    <span class="step-num">01</span>
-                    <h3>Submit a Request</h3>
-                    <p>Fill out the form below with your preferred size, glaze direction, and budget. I'll follow up within a few days to discuss details and confirm the commission.</p>
-                </div>
-                <div class="process-step">
-                    <span class="step-num">02</span>
-                    <h3>Making</h3>
-                    <p>Once confirmed, I'll throw, trim, and glaze your piece in Brooklyn. You'll receive progress photos along the way. The full process — throwing through final firing — takes 6–8 weeks.</p>
-                </div>
-                <div class="process-step">
-                    <span class="step-num">03</span>
-                    <h3>Delivery</h3>
-                    <p>Your pot is available for pickup in Brooklyn or can be shipped. Shipping is additional and handled carefully — these are thick-walled vessels built to last and cook with.</p>
-                </div>
-            </div>
+        <div class="spec">
+          <span class="spec-label">Sizes</span>
+          <span class="spec-value">Small · Medium · Large</span>
         </div>
-
-        <div class="order-section">
-            <div class="order-header">
-                <h2>Place an Order</h2>
-                <p>All fields help me build something that fits what you're looking for. I'll be in touch within a few days to discuss next steps.</p>
-            </div>
-
-            <form class="order-form" action="https://formsubmit.co/kavinlam327@gmail.com" method="POST">
-                <input type="hidden" name="_subject" value="New Clay Pot Order Request">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="https://ceramics.kavinlam.com/order.html?submitted=true">
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="size">Size</label>
-                        <select id="size" name="size" required>
-                            <option value="" disabled selected>Select a size</option>
-                            <option value="Small (1–2 qt)">Small — 1–2 quart, serves 1–2</option>
-                            <option value="Medium (3–4 qt)">Medium — 3–4 quart, serves 2–4</option>
-                            <option value="Large (5–6 qt)">Large — 5–6 quart, serves 4–6</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="spend">Desired Spend</label>
-                        <select id="spend" name="desired_spend" required>
-                            <option value="" disabled selected>Select a range</option>
-                            <option value="$250">$250</option>
-                            <option value="$300–$350">$300 – $350</option>
-                            <option value="$350–$400">$350 – $400</option>
-                            <option value="$400–$500">$400 – $500</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="form-group form-group-full">
-                    <label for="color">Glaze &amp; Color Preference</label>
-                    <textarea id="color" name="glaze_preference" rows="4" placeholder="Describe what you have in mind — earthy browns, cool blues, matte finish, something specific you've seen... Any direction helps, even vague ones."></textarea>
-                </div>
-
-                <button type="submit" class="form-submit">Send Request</button>
-            </form>
-
-            <p class="form-note">Not ready to commit? Email me directly at <a href="mailto:kavinlam327@gmail.com">kavinlam327@gmail.com</a> with any questions.</p>
+        <div class="spec">
+          <span class="spec-label">Made in</span>
+          <span class="spec-value">Brooklyn, New York</span>
         </div>
+      </div>
+    </div>
+  </div>
 
-    </main>
+  <div class="donabe-process" data-reveal>
+    <h2>What to Expect</h2>
+    <div class="process-steps">
+      <div class="process-step">
+        <span class="step-num">01</span>
+        <h3>Submit a Request</h3>
+        <p>Fill out the form below with your preferred size, glaze direction, and budget. I'll follow up within a few days to discuss details and confirm the commission.</p>
+      </div>
+      <div class="process-step">
+        <span class="step-num">02</span>
+        <h3>Making</h3>
+        <p>Once confirmed, I'll throw, trim, and glaze your piece in Brooklyn. You'll receive progress photos along the way. The full process — throwing through final firing — takes 6–8 weeks.</p>
+      </div>
+      <div class="process-step">
+        <span class="step-num">03</span>
+        <h3>Delivery</h3>
+        <p>Your pot is available for pickup in Brooklyn or can be shipped. Shipping is additional and handled carefully — these are thick-walled vessels built to last and cook with.</p>
+      </div>
+    </div>
+  </div>
 
-    <footer>
-        <p>&copy; 2025 Kavin Lam. All rights reserved.</p>
-    </footer>
+  <div class="order-section" data-reveal>
+    <div class="order-header">
+      <h2>Place an Order</h2>
+      <p>All fields help me build something that fits what you're looking for. I'll be in touch within a few days to discuss next steps.</p>
+    </div>
 
-    <script>
-    if (window.location.search.includes('submitted=true')) {
-        document.querySelector('.about-content').innerHTML = `
-            <h1>Request Received</h1>
-            <p>Thank you — I'll be in touch within a few days to talk through the details.</p>
-            <p><a href="index.html" style="color: var(--dark-gray);">Back to Work</a></p>
-        `;
-    }
-    </script>
+    <form class="order-form" action="https://formsubmit.co/kavinlam327@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="New Clay Pot Order Request">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://ceramics.kavinlam.com/order.html?submitted=true">
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="size">Size</label>
+          <select id="size" name="size" required>
+            <option value="" disabled selected>Select a size</option>
+            <option value="Small (1–2 qt)">Small — 1–2 quart, serves 1–2</option>
+            <option value="Medium (3–4 qt)">Medium — 3–4 quart, serves 2–4</option>
+            <option value="Large (5–6 qt)">Large — 5–6 quart, serves 4–6</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="spend">Desired Spend</label>
+          <select id="spend" name="desired_spend" required>
+            <option value="" disabled selected>Select a range</option>
+            <option value="$250">$250</option>
+            <option value="$300–$350">$300 – $350</option>
+            <option value="$350–$400">$350 – $400</option>
+            <option value="$400–$500">$400 – $500</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group form-group-full">
+        <label for="color">Glaze &amp; Color Preference</label>
+        <textarea id="color" name="glaze_preference" rows="4" placeholder="Describe what you have in mind — earthy browns, cool blues, matte finish, something specific you've seen... Any direction helps, even vague ones."></textarea>
+      </div>
+
+      <button type="submit" class="form-submit">Send Request</button>
+    </form>
+
+    <p class="form-note">Not ready to commit? Email me directly at <a href="mailto:kavinlam327@gmail.com">kavinlam327@gmail.com</a> with any questions.</p>
+  </div>
+
+</main>
+
+<footer class="page foot">
+  <div>&copy; 2025 Kavin Lam &middot; made in Atlanta</div>
+  <div><a href="contact.html" class="link-arrow">contact</a></div>
+</footer>
+
+<script>
+(function(){
+  const h=document.querySelector('.nav-hamburger'),d=document.querySelector('.nav-mobile-drawer');
+  h.addEventListener('click',()=>{
+    const open=d.classList.toggle('is-open');
+    h.classList.toggle('is-open',open);
+    document.body.style.overflow=open?'hidden':'';
+  });
+  d.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+    d.classList.remove('is-open');h.classList.remove('is-open');
+    document.body.style.overflow='';
+  }));
+  const reduced=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  if(reduced){document.querySelectorAll('[data-reveal]').forEach(el=>el.classList.add('is-revealed'));}
+  else{
+    const io=new IntersectionObserver(entries=>{
+      entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-revealed');io.unobserve(e.target);}});
+    },{threshold:0.08});
+    document.querySelectorAll('[data-reveal]').forEach(el=>io.observe(el));
+  }
+  if(window.location.search.includes('submitted=true')){
+    const sec=document.querySelector('.order-section');
+    if(sec) sec.innerHTML=`
+      <div style="text-align:center;padding:4rem 0">
+        <h2 style="font-family:var(--font-display);font-size:2rem;font-weight:300;letter-spacing:1px;margin-bottom:1rem">Request Received</h2>
+        <p style="font-size:1rem;font-weight:300;color:var(--ink-soft);line-height:1.7">Thank you — I'll be in touch within a few days to talk through the details.</p>
+        <p style="margin-top:1.5rem"><a href="index.html" style="color:var(--ink-soft);text-decoration:underline">Back to Work</a></p>
+      </div>`;
+  }
+})();
+</script>
 </body>
 </html>

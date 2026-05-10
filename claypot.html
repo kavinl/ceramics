@@ -1,294 +1,529 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clay Pot — Kavin Lam Ceramics | Brooklyn</title>
-    <meta name="description" content="A wheel-thrown clay pot rooted in Cantonese claypot rice tradition. Learn what makes a clay pot different, how to cook with it, and order yours from Brooklyn ceramic artist Kavin Lam.">
-    <meta name="keywords" content="claypot, clay pot, claypot rice, donabe, ceramic pot, 煲仔飯, handmade pottery, Brooklyn ceramics">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clay Pot — Kavin Lam Ceramics | Brooklyn</title>
+  <meta name="description" content="A wheel-thrown clay pot rooted in Cantonese claypot rice tradition. Learn what makes a clay pot different, how to cook with it, and order yours from Brooklyn ceramic artist Kavin Lam.">
+  <meta name="keywords" content="claypot, clay pot, claypot rice, donabe, ceramic pot, 煲仔飯, handmade pottery, Brooklyn ceramics">
 
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ceramics.kavinlam.com/claypot.html">
-    <meta property="og:title" content="Clay Pot — Kavin Lam Ceramics">
-    <meta property="og:description" content="A wheel-thrown clay pot rooted in Cantonese claypot rice tradition. Made to order in Brooklyn.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ceramics.kavinlam.com/claypot.html">
+  <meta property="og:title" content="Clay Pot — Kavin Lam Ceramics">
+  <meta property="og:description" content="A wheel-thrown clay pot rooted in Cantonese claypot rice tradition. Made to order in Brooklyn.">
 
-    <link rel="canonical" href="https://ceramics.kavinlam.com/claypot.html">
-    <link rel="stylesheet" href="styles.css">
+  <link rel="canonical" href="https://ceramics.kavinlam.com/claypot.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Work+Sans:wght@300;400&display=swap" rel="stylesheet">
+
+  <style>
+:root {
+  --paper:#FAFAFA; --warm-tint:#F8F4EE; --ink:#1A1A1A; --ink-soft:#333;
+  --muted:#999; --hairline:#E8E8E8; --kiln:#B8674E; --kiln-deep:#8E4A36;
+  --teal:#5FA39E; --matcha:#A8C49A;
+  --font-display:'Cormorant Garamond','Cormorant',Georgia,serif;
+  --font-sans:'Work Sans',-apple-system,sans-serif;
+  --dur-quick:240ms; --dur-base:400ms; --dur-slow:700ms;
+  --ease-entrance:cubic-bezier(.16,1,.3,1);
+  --ease-standard:cubic-bezier(.4,0,.2,1);
+  --ease-organic:cubic-bezier(.45,0,.55,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{overflow-x:clip}
+body{background:var(--warm-tint);color:var(--ink);font-family:var(--font-sans);
+  font-weight:300;-webkit-font-smoothing:antialiased;line-height:1.6;overflow-x:clip}
+a{color:inherit;text-decoration:none}
+.page{max-width:1400px;margin:0 auto;padding:0 9rem}
+.eyebrow{font-size:.72rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-weight:400}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 9rem;
+  border-bottom:1px solid var(--hairline);background:rgba(248,244,238,.92);
+  backdrop-filter:blur(10px);position:sticky;top:0;z-index:50}
+.brand{font-family:var(--font-display);font-size:1.25rem;letter-spacing:.5px;font-weight:400}
+.nav-links{display:flex;gap:2.5rem;font-size:.78rem;letter-spacing:1.5px;
+  text-transform:uppercase;color:var(--ink-soft)}
+.nav-links a{transition:color var(--dur-quick) var(--ease-standard)}
+.nav-links a:hover,.nav-links a.active{color:var(--ink)}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;
+  border:none;cursor:pointer;padding:4px}
+.nav-hamburger span{display:block;width:22px;height:1px;background:var(--ink);
+  transition:transform var(--dur-base) var(--ease-standard),opacity var(--dur-base) var(--ease-standard)}
+.nav-hamburger.is-open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.nav-hamburger.is-open span:nth-child(2){opacity:0}
+.nav-hamburger.is-open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.nav-mobile-drawer{display:none;position:fixed;inset:0;background:var(--warm-tint);
+  z-index:49;padding:6rem 2rem 2rem;flex-direction:column;gap:2rem}
+.nav-mobile-drawer.is-open{display:flex}
+.nav-mobile-drawer a{font-size:2rem;font-family:var(--font-display);font-weight:300;
+  color:var(--ink);border-bottom:1px solid var(--hairline);padding-bottom:1.25rem}
+.btn{display:inline-block;padding:1rem 2rem;background:var(--ink);color:var(--paper);
+  font-size:.74rem;letter-spacing:1.8px;text-transform:uppercase;border:1px solid var(--ink);
+  cursor:pointer;transition:background var(--dur-quick) var(--ease-standard),
+  color var(--dur-quick) var(--ease-standard),border-color var(--dur-quick) var(--ease-standard)}
+.btn:hover{background:var(--kiln-deep);border-color:var(--kiln-deep)}
+.link-arrow{font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--ink);position:relative;padding-bottom:4px}
+.link-arrow::after{content:'';position:absolute;left:0;bottom:0;height:1px;width:100%;
+  background:currentColor;transform-origin:left center;
+  transition:transform var(--dur-base) var(--ease-standard)}
+.link-arrow:hover{color:var(--kiln)}
+.link-arrow:hover::after{transform-origin:right center;transform:scaleX(0)}
+.foot{padding:3rem 0 2rem;display:flex;justify-content:space-between;align-items:center;
+  font-size:.74rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);
+  border-top:1px solid var(--hairline);margin-top:4rem}
+[data-reveal]{opacity:0;transform:translateY(20px);
+  transition:opacity var(--dur-slow) var(--ease-entrance),transform var(--dur-slow) var(--ease-entrance)}
+[data-reveal].is-revealed{opacity:1;transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+  [data-reveal]{opacity:1;transform:none}}
+@media(max-width:1200px){.page{padding:0 6rem}.nav{padding:1.5rem 6rem}}
+@media(max-width:960px){.page{padding:0 3.5rem}.nav{padding:1.5rem 3.5rem}}
+@media(max-width:640px){
+  .page{padding:0 1.75rem}.nav{padding:1rem 1.75rem}
+  .nav-links{display:none}.nav-hamburger{display:flex}
+  .foot{flex-direction:column;gap:.75rem;align-items:flex-start;padding:2rem 0 1.5rem}}
+@media(max-width:400px){.page{padding:0 1.25rem}.nav{padding:1rem 1.25rem}}
+
+/* ═══════════════════════════════════════════════
+   claypot page content styles (from styles.css)
+   ═══════════════════════════════════════════════ */
+.donabe-page{padding-top:0}
+
+/* ─── Hero C ─── */
+.cp-hero-c{padding:7rem 3rem 6rem;text-align:center;border-bottom:1px solid var(--hairline)}
+.cp-hero-c-inner{max-width:980px;margin:0 auto}
+.cp-hero-c .donabe-eyebrow{margin-bottom:1.5rem}
+.cp-hero-c-headline{font-family:var(--font-display);font-size:clamp(2.6rem,6.5vw,5.2rem);
+  font-weight:300;letter-spacing:.5px;line-height:1.15;color:var(--ink);margin:0}
+.cp-hero-c-pot{display:inline-block;vertical-align:middle;width:clamp(52px,7.5vw,88px);
+  position:relative;top:-.12em;margin:0 .35rem}
+.cp-hero-c-sub{font-size:.95rem;font-weight:300;color:var(--ink-soft);line-height:1.8;
+  max-width:460px;margin:2.25rem auto 2.5rem}
+@media(max-width:768px){
+  .cp-hero-c{padding:5rem 1.5rem 4rem}
+  .cp-hero-c-pot{top:-.08em}
+}
+
+/* ─── Donabe eyebrow ─── */
+.donabe-eyebrow{font-size:.78rem;font-weight:400;letter-spacing:2px;text-transform:uppercase;
+  color:var(--muted);margin-bottom:1rem}
+
+/* ─── Donabe process (off-white band) ─── */
+.donabe-process{background-color:var(--paper);border-top:1px solid var(--hairline);
+  border-bottom:1px solid var(--hairline);padding:5rem 3rem;text-align:center}
+.donabe-process h2{font-family:var(--font-display);font-size:2rem;font-weight:300;
+  letter-spacing:1px;margin-bottom:3rem;color:var(--ink)}
+
+/* ─── White-bg sections ─── */
+.cp-white-section{padding:5rem 3rem;text-align:center}
+.cp-white-section-inner{max-width:1100px;margin:0 auto}
+.cp-white-section h2{font-family:var(--font-display);font-size:2rem;font-weight:300;
+  letter-spacing:1px;margin-bottom:3.5rem;color:var(--ink)}
+.cp-recipes-wrap{text-align:left}
+
+/* ─── Hero CTA link ─── */
+.hero-cta{display:inline-block;padding:0;background:none;color:var(--ink-soft);
+  text-decoration:none;font-size:.85rem;font-weight:300;letter-spacing:.5px;
+  border-bottom:1px solid var(--ink-soft);transition:color var(--dur-base) var(--ease-standard),
+  border-color var(--dur-base) var(--ease-standard)}
+.hero-cta:hover{color:var(--ink);border-color:var(--ink)}
+
+/* ─── How steps ─── */
+.cp-how-steps{max-width:1100px;margin:0 auto;display:grid;
+  grid-template-columns:repeat(5,1fr);gap:2.5rem;text-align:left;align-items:start}
+.cp-how-steps>div:nth-child(1){margin-top:0}
+.cp-how-steps>div:nth-child(2){margin-top:2.5rem}
+.cp-how-steps>div:nth-child(3){margin-top:.75rem}
+.cp-how-steps>div:nth-child(4){margin-top:3.25rem}
+.cp-how-steps>div:nth-child(5){margin-top:1.5rem}
+@media(max-width:1024px){
+  .cp-how-steps{grid-template-columns:repeat(3,1fr)}
+  .cp-how-steps>div:nth-child(n){margin-top:0}
+}
+@media(max-width:600px){.cp-how-steps{grid-template-columns:1fr;gap:2rem}}
+
+/* ─── Process step ─── */
+.process-step{display:flex;flex-direction:column;gap:.75rem}
+.step-num{font-size:.72rem;font-weight:400;letter-spacing:2px;color:var(--muted)}
+.process-step h3{font-family:var(--font-display);font-size:1.3rem;font-weight:400;color:var(--ink)}
+.process-step p{font-size:.9rem;line-height:1.7;color:var(--ink-soft);font-weight:300}
+
+/* ─── Prose ─── */
+.cp-prose{max-width:640px;margin:0 auto;text-align:left}
+.cp-prose p{font-size:.95rem;line-height:1.85;font-weight:300;color:var(--ink-soft);margin-bottom:1.5rem}
+.cp-prose p:last-child{margin-bottom:0}
+
+/* ─── Benefits ─── */
+.cp-benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:2.5rem;text-align:center;align-items:start}
+.cp-benefits>div:nth-child(1){margin-top:0}
+.cp-benefits>div:nth-child(2){margin-top:3.5rem}
+.cp-benefits>div:nth-child(3){margin-top:1.25rem}
+.cp-benefits>div:nth-child(4){margin-top:4.5rem}
+
+/* ─── Icon stamp ─── */
+.cp-icon-stamp{width:64px;height:64px;border-radius:50%;border:1px solid var(--hairline);
+  background:var(--paper);display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;color:var(--ink-soft);margin:0 auto 1.5rem}
+.cp-recipe-card .cp-icon-stamp{width:48px;height:48px;margin:0 0 1rem 0}
+
+.cp-benefit-title{font-family:var(--font-display);font-size:1.25rem;font-weight:400;
+  letter-spacing:.5px;color:var(--ink);margin-bottom:.6rem}
+.cp-benefit-body{font-size:.88rem;font-weight:300;line-height:1.75;color:var(--ink-soft)}
+
+/* ─── Recipes ─── */
+.cp-recipes{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem;text-align:left}
+.cp-recipe-card{border-top:1px solid var(--hairline);padding-top:1.75rem;
+  display:flex;flex-direction:column;gap:.5rem}
+.cp-recipe-name{font-family:var(--font-display);font-size:1.3rem;font-weight:400;
+  color:var(--ink);letter-spacing:.5px}
+.cp-recipe-pitch{font-size:.88rem;font-weight:300;color:var(--muted);line-height:1.6;margin-bottom:.5rem}
+.cp-recipe-label{font-size:.7rem;font-weight:400;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--muted);margin-top:.75rem;margin-bottom:.4rem}
+.cp-recipe-list,.cp-recipe-steps{font-size:.87rem;font-weight:300;color:var(--ink-soft);
+  line-height:1.75;padding-left:1.2rem}
+.cp-recipe-list li,.cp-recipe-steps li{margin-bottom:.3rem}
+
+/* ─── Care list ─── */
+.cp-care-list{list-style:none;padding:0;max-width:580px;margin:0 auto;text-align:left;
+  display:flex;flex-direction:column;gap:1rem}
+.cp-care-list li{font-size:.93rem;font-weight:300;color:var(--ink-soft);line-height:1.7;
+  padding-left:1.5rem;position:relative}
+.cp-care-list li::before{content:'—';position:absolute;left:0;color:var(--muted)}
+
+/* ─── Closing CTA ─── */
+.cp-closing{text-align:center;padding:5rem 3rem 6rem}
+.cp-closing h2{font-family:var(--font-display);font-size:2rem;font-weight:300;
+  letter-spacing:1px;margin-bottom:2rem;color:var(--ink)}
+.cp-cta-btn{display:inline-block;padding:1rem 2.5rem;background-color:var(--ink);
+  color:var(--paper);text-decoration:none;font-family:var(--font-sans);font-size:.85rem;
+  font-weight:300;letter-spacing:1.5px;text-transform:uppercase;
+  transition:background var(--dur-quick) var(--ease-standard)}
+.cp-cta-btn:hover{background-color:var(--kiln-deep)}
+
+/* ─── Claypot responsive ─── */
+@media(max-width:968px){
+  .cp-white-section{padding:4rem 2rem}
+  .cp-benefits{grid-template-columns:repeat(2,1fr);gap:2.5rem}
+  .cp-benefits>div:nth-child(1),
+  .cp-benefits>div:nth-child(2),
+  .cp-benefits>div:nth-child(3),
+  .cp-benefits>div:nth-child(4){margin-top:0}
+}
+@media(max-width:768px){
+  .cp-benefits{grid-template-columns:repeat(2,1fr);gap:2rem}
+  .cp-recipes{grid-template-columns:repeat(3,1fr);gap:1.5rem}
+  .cp-closing{padding:4rem 1.5rem 5rem}
+}
+@media(max-width:600px){.cp-recipes{grid-template-columns:1fr}}
+@media(max-width:480px){.cp-benefits{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
 
-<nav class="main-nav">
-    <div class="nav-content">
-        <a href="index.html" class="logo">Kavin Lam</a>
-        <div class="nav-links">
-            <a href="index.html">Work</a>
-            <a href="about.html">About</a>
-            <a href="claypot.html" class="active">Claypot</a>
-            <a href="order.html">Order</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </div>
+<nav class="nav">
+  <a href="index.html" class="brand">Kavin Lam</a>
+  <div class="nav-links">
+    <a href="claypot.html" class="active">claypot</a>
+    <a href="index.html#vessels">vessels</a>
+    <a href="commissions.html">commissions</a>
+    <a href="about.html">about</a>
+    <a href="order.html">order</a>
+  </div>
+  <button class="nav-hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="nav-mobile-drawer">
+  <a href="claypot.html">Claypot</a>
+  <a href="index.html#vessels">Vessels</a>
+  <a href="commissions.html">Commissions</a>
+  <a href="about.html">About</a>
+  <a href="order.html">Order</a>
+</div>
 
 <main class="donabe-page">
 
-    <!-- ─── Hero ─── -->
-    <div class="cp-hero-c">
-        <div class="cp-hero-c-inner">
-            <p class="donabe-eyebrow">Handmade · Brooklyn, New York</p>
-            <h1 class="cp-hero-c-headline">
-                The pot
-                <img class="cp-hero-c-pot" src="assets/claypot-A-face-steam-tangerine.svg" alt="" aria-hidden="true">
-                that does the work.
-            </h1>
-            <p class="cp-hero-c-sub">A wheel-thrown clay pot rooted in Cantonese claypot rice tradition — built for slow heat, locked steam, and cooking that takes time. Made to order in Brooklyn.</p>
-            <a href="order.html" class="hero-cta">Shop the claypot →</a>
+  <!-- ─── Hero ─── -->
+  <div class="cp-hero-c" data-reveal>
+    <div class="cp-hero-c-inner">
+      <p class="donabe-eyebrow">Handmade · Brooklyn, New York</p>
+      <h1 class="cp-hero-c-headline">
+        The pot
+        <img class="cp-hero-c-pot" src="assets/claypot-A-face-steam-tangerine.svg" alt="" aria-hidden="true">
+        that does the work.
+      </h1>
+      <p class="cp-hero-c-sub">A wheel-thrown clay pot rooted in Cantonese claypot rice tradition — built for slow heat, locked steam, and cooking that takes time. Made to order in Brooklyn.</p>
+      <a href="order.html" class="hero-cta">Shop the claypot →</a>
+    </div>
+  </div>
+
+  <!-- ─── What is a claypot? ─── -->
+  <div class="donabe-process" data-reveal>
+    <h2>What is a claypot?</h2>
+    <div class="cp-prose">
+      <p>A claypot is an unglazed or partially glazed earthenware vessel used across South and East Asia for thousands of years. In the Cantonese kitchen it's called 沙煲 — a sand pot — and it's the foundation of 煲仔飯: ingredients cooked together over an open flame until the bottom crust crackles and catches.</p>
+      <p>Unlike a Dutch oven or cast iron, a claypot is porous. It breathes. As it heats, the walls absorb and release moisture from the food itself, creating a gentler, more even cook. Heat builds slowly, flavor concentrates, and steam cycles back onto whatever is inside. Over time the pot darkens and develops a patina — a record of every meal it's held.</p>
+    </div>
+  </div>
+
+  <!-- ─── Why cook with one ─── -->
+  <div class="cp-white-section" data-reveal>
+    <div class="cp-white-section-inner">
+      <h2>Why cook with one</h2>
+      <div class="cp-benefits">
+
+        <div>
+          <div class="cp-icon-stamp">
+            <!-- Flame: even heat -->
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
+              <path d="M24 42C15 42 10 35 12 27Q14 22 18 19Q17 25 21 27Q21 21 17 14Q23 10 26 16Q29 12 32 15Q35 20 33 26Q35 22 34 16Q39 22 37 29Q35 37 24 42Z"/>
+            </svg>
+          </div>
+          <h3 class="cp-benefit-title">Even heat</h3>
+          <p class="cp-benefit-body">Clay distributes heat slowly and steadily, eliminating hot spots and giving a gentle, consistent cook from edge to center.</p>
         </div>
-    </div>
 
-    <!-- ─── What is a claypot? ─── -->
-    <div class="donabe-process">
-        <h2>What is a claypot?</h2>
-        <div class="cp-prose">
-            <p>A claypot is an unglazed or partially glazed earthenware vessel used across South and East Asia for thousands of years. In the Cantonese kitchen it's called 沙煲 — a sand pot — and it's the foundation of 煲仔飯: ingredients cooked together over an open flame until the bottom crust crackles and catches.</p>
-            <p>Unlike a Dutch oven or cast iron, a claypot is porous. It breathes. As it heats, the walls absorb and release moisture from the food itself, creating a gentler, more even cook. Heat builds slowly, flavor concentrates, and steam cycles back onto whatever is inside. Over time the pot darkens and develops a patina — a record of every meal it's held.</p>
+        <div>
+          <div class="cp-icon-stamp">
+            <!-- Droplet: locked-in moisture -->
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
+              <path d="M24 8C24 8 11 23 11 32C11 39 17 44 24 44C31 44 37 39 37 32C37 23 24 8 24 8Z"/>
+              <path d="M17 34C17 31 19 29 21 28" stroke-width="1.2" opacity="0.55"/>
+            </svg>
+          </div>
+          <h3 class="cp-benefit-title">Locked-in moisture</h3>
+          <p class="cp-benefit-body">The domed lid creates a self-basting cycle — steam rises, condenses, and drips back. Rice never dries out. Braises stay glossy.</p>
         </div>
-    </div>
 
-    <!-- ─── Why cook with one ─── -->
-    <div class="cp-white-section">
-        <div class="cp-white-section-inner">
-            <h2>Why cook with one</h2>
-            <div class="cp-benefits">
-
-                <div>
-                    <div class="cp-icon-stamp">
-                        <!-- Flame: even heat -->
-                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
-                            <path d="M24 42C15 42 10 35 12 27Q14 22 18 19Q17 25 21 27Q21 21 17 14Q23 10 26 16Q29 12 32 15Q35 20 33 26Q35 22 34 16Q39 22 37 29Q35 37 24 42Z"/>
-                        </svg>
-                    </div>
-                    <h3 class="cp-benefit-title">Even heat</h3>
-                    <p class="cp-benefit-body">Clay distributes heat slowly and steadily, eliminating hot spots and giving a gentle, consistent cook from edge to center.</p>
-                </div>
-
-                <div>
-                    <div class="cp-icon-stamp">
-                        <!-- Droplet: locked-in moisture -->
-                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
-                            <path d="M24 8C24 8 11 23 11 32C11 39 17 44 24 44C31 44 37 39 37 32C37 23 24 8 24 8Z"/>
-                            <path d="M17 34C17 31 19 29 21 28" stroke-width="1.2" opacity="0.55"/>
-                        </svg>
-                    </div>
-                    <h3 class="cp-benefit-title">Locked-in moisture</h3>
-                    <p class="cp-benefit-body">The domed lid creates a self-basting cycle — steam rises, condenses, and drips back. Rice never dries out. Braises stay glossy.</p>
-                </div>
-
-                <div>
-                    <div class="cp-icon-stamp">
-                        <!-- Leaf: mineral character -->
-                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
-                            <path d="M24 41C24 41 9 30 11 17C13 7 24 7 24 7C24 7 35 7 37 17C39 30 24 41 24 41Z"/>
-                            <line x1="24" y1="41" x2="24" y2="9"/>
-                            <path d="M24 26C19 21 13 19 11 17"/>
-                            <path d="M24 26C29 21 35 19 37 17"/>
-                        </svg>
-                    </div>
-                    <h3 class="cp-benefit-title">Mineral character</h3>
-                    <p class="cp-benefit-body">Unglazed clay imparts a faint earthiness to what you cook — subtle, not muddy. Old pots absorb the flavor of past meals.</p>
-                </div>
-
-                <div>
-                    <div class="cp-icon-stamp">
-                        <!-- Hand: patina with use -->
-                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
-                            <path d="M14 40V27Q14 25 16 25Q18 25 18 27V33"/>
-                            <path d="M18 33V23Q18 21 20 21Q22 21 22 23V33"/>
-                            <path d="M22 33V21Q22 19 24 19Q26 19 26 21V33"/>
-                            <path d="M26 33V23Q26 21 28 21Q30 21 30 23V33"/>
-                            <path d="M30 33V27Q30 25 32 25Q34 25 34 27V34Q34 41 24 41Q14 41 14 40"/>
-                        </svg>
-                    </div>
-                    <h3 class="cp-benefit-title">Patina with use</h3>
-                    <p class="cp-benefit-body">Each use darkens and seasons the pot. A well-used clay pot is proof of good cooking — it only gets better.</p>
-                </div>
-
-            </div>
+        <div>
+          <div class="cp-icon-stamp">
+            <!-- Leaf: mineral character -->
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
+              <path d="M24 41C24 41 9 30 11 17C13 7 24 7 24 7C24 7 35 7 37 17C39 30 24 41 24 41Z"/>
+              <line x1="24" y1="41" x2="24" y2="9"/>
+              <path d="M24 26C19 21 13 19 11 17"/>
+              <path d="M24 26C29 21 35 19 37 17"/>
+            </svg>
+          </div>
+          <h3 class="cp-benefit-title">Mineral character</h3>
+          <p class="cp-benefit-body">Unglazed clay imparts a faint earthiness to what you cook — subtle, not muddy. Old pots absorb the flavor of past meals.</p>
         </div>
-    </div>
 
-    <!-- ─── How yours is made ─── -->
-    <div class="donabe-process">
-        <h2>How yours is made</h2>
-        <div class="cp-how-steps">
-
-            <div class="process-step">
-                <span class="step-num">01</span>
-                <h3>Fill out the form</h3>
-                <p>Tell me what you're after — how many people you usually cook for, what kind of food, and whether you have anything in mind visually.</p>
-            </div>
-
-            <div class="process-step">
-                <span class="step-num">02</span>
-                <h3>We'll talk</h3>
-                <p>I'll follow up and we'll work through size, glaze direction, and function. Half design conversation, half talking about what you're going to cook in it.</p>
-            </div>
-
-            <div class="process-step">
-                <span class="step-num">03</span>
-                <h3>Deposit, then clay</h3>
-                <p>A deposit locks in your place in the queue. After that the clay comes out and the real work starts.</p>
-            </div>
-
-            <div class="process-step">
-                <span class="step-num">04</span>
-                <h3>Six to eight weeks of making</h3>
-                <p>Base and lid get thrown, dried, trimmed, bisque-fired, sanded, glazed, and fired again. Progress photos along the way.</p>
-            </div>
-
-            <div class="process-step">
-                <span class="step-num">05</span>
-                <h3>Done. Cook something.</h3>
-                <p>Your pot arrives ready to season and use. The first meal is yours to decide.</p>
-            </div>
-
+        <div>
+          <div class="cp-icon-stamp">
+            <!-- Hand: patina with use -->
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
+              <path d="M14 40V27Q14 25 16 25Q18 25 18 27V33"/>
+              <path d="M18 33V23Q18 21 20 21Q22 21 22 23V33"/>
+              <path d="M22 33V21Q22 19 24 19Q26 19 26 21V33"/>
+              <path d="M26 33V23Q26 21 28 21Q30 21 30 23V33"/>
+              <path d="M30 33V27Q30 25 32 25Q34 25 34 27V34Q34 41 24 41Q14 41 14 40"/>
+            </svg>
+          </div>
+          <h3 class="cp-benefit-title">Patina with use</h3>
+          <p class="cp-benefit-body">Each use darkens and seasons the pot. A well-used clay pot is proof of good cooking — it only gets better.</p>
         </div>
+
+      </div>
     </div>
+  </div>
 
-    <!-- ─── Three easy recipes ─── -->
-    <div class="cp-white-section">
-        <div class="cp-white-section-inner">
-            <h2>Three easy recipes</h2>
-            <div class="cp-recipes-wrap">
-            <div class="cp-recipes">
+  <!-- ─── How yours is made ─── -->
+  <div class="donabe-process" data-reveal>
+    <h2>How yours is made</h2>
+    <div class="cp-how-steps">
 
-                <!-- Recipe 1: Claypot rice -->
-                <div class="cp-recipe-card">
-                    <div class="cp-icon-stamp">
-                        <!-- Bowl with rice and chopsticks -->
-                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
-                            <path d="M9 24H39"/>
-                            <path d="M11 24Q12 37 24 39Q36 37 37 24"/>
-                            <ellipse cx="19" cy="17" rx="2" ry="3.5" transform="rotate(-15 19 17)"/>
-                            <ellipse cx="24" cy="15" rx="2" ry="3.5"/>
-                            <ellipse cx="29" cy="17" rx="2" ry="3.5" transform="rotate(15 29 17)"/>
-                            <line x1="15" y1="9" x2="18" y2="22"/>
-                            <line x1="20" y1="7" x2="22" y2="22"/>
-                        </svg>
-                    </div>
-                    <h3 class="cp-recipe-name">Claypot rice</h3>
-                    <p class="cp-recipe-pitch">The original use — rice and toppings cooked until the bottom crackles.</p>
-                    <p class="cp-recipe-label">Ingredients</p>
-                    <ul class="cp-recipe-list">
-                        <li>2 cups jasmine rice</li>
-                        <li>2½ cups water</li>
-                        <li>Lapcheung (Chinese sausage), sliced</li>
-                        <li>Chinese bacon, sliced</li>
-                        <li>Pickled vegetables</li>
-                        <li>Soy sauce + dark soy sauce</li>
-                        <li>Sugar, salt, MSG to taste</li>
-                    </ul>
-                    <p class="cp-recipe-label">Method</p>
-                    <ol class="cp-recipe-steps">
-                        <li>Rinse rice and add to pot with water and your toppings.</li>
-                        <li>Bring to a boil over medium-high heat, then lid on and reduce to low.</li>
-                        <li>Cook 12–15 minutes. Check by smell and sound — a faint crackle, not a burn.</li>
-                        <li>Mix soy sauce, dark soy, a pinch of sugar, salt, and MSG. Pour over and serve straight from the pot.</li>
-                    </ol>
-                </div>
+      <div class="process-step">
+        <span class="step-num">01</span>
+        <h3>Fill out the form</h3>
+        <p>Tell me what you're after — how many people you usually cook for, what kind of food, and whether you have anything in mind visually.</p>
+      </div>
 
-                <!-- Recipe 2: Miso mushroom hot pot -->
-                <div class="cp-recipe-card">
-                    <div class="cp-icon-stamp">
-                        <!-- Pot with steam curls -->
-                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
-                            <path d="M17 15 Q14 11 17 8 Q20 5 17 2" stroke-width="1.5"/>
-                            <path d="M31 15 Q28 11 31 8 Q34 5 31 2" stroke-width="1.5"/>
-                            <ellipse cx="24" cy="21" rx="14" ry="4"/>
-                            <path d="M10 21Q9 35 24 37Q39 35 38 21"/>
-                            <path d="M10 24Q6 24 6 28Q6 32 10 32" stroke-linecap="round"/>
-                            <path d="M38 24Q42 24 42 28Q42 32 38 32" stroke-linecap="round"/>
-                        </svg>
-                    </div>
-                    <h3 class="cp-recipe-name">Miso mushroom hot pot</h3>
-                    <p class="cp-recipe-pitch">Umami-forward broth with earthy mushrooms — the claypot holds heat at the table.</p>
-                    <p class="cp-recipe-label">Ingredients</p>
-                    <ul class="cp-recipe-list">
-                        <li>4 cups dashi or water</li>
-                        <li>3 tbsp white miso</li>
-                        <li>Mixed mushrooms (shiitake, enoki, king oyster)</li>
-                        <li>Tofu, sliced</li>
-                        <li>Green onion, sesame oil to finish</li>
-                    </ul>
-                    <!-- TODO: confirm quantities and any additional aromatics -->
-                    <p class="cp-recipe-label">Method</p>
-                    <ol class="cp-recipe-steps">
-                        <li>Bring dashi to a simmer in the pot. Whisk in miso until dissolved.</li>
-                        <li>Add mushrooms and tofu. Cook 5–8 minutes on low.</li>
-                        <li>Finish with sliced green onion and a drizzle of sesame oil. Bring the pot straight to the table.</li>
-                    </ol>
-                </div>
+      <div class="process-step">
+        <span class="step-num">02</span>
+        <h3>We'll talk</h3>
+        <p>I'll follow up and we'll work through size, glaze direction, and function. Half design conversation, half talking about what you're going to cook in it.</p>
+      </div>
 
-                <!-- Recipe 3: Soy-braised kabocha -->
-                <div class="cp-recipe-card">
-                    <div class="cp-icon-stamp">
-                        <!-- Mushroom (placeholder — swap for kabocha icon) -->
-                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
-                            <path d="M12 27 Q10 14 24 12 Q38 14 36 27Z"/>
-                            <line x1="14" y1="27" x2="16" y2="33"/>
-                            <line x1="24" y1="27" x2="24" y2="35"/>
-                            <line x1="34" y1="27" x2="32" y2="33"/>
-                            <path d="M20 33 Q19 41 24 43 Q29 41 28 33"/>
-                        </svg>
-                    </div>
-                    <h3 class="cp-recipe-name">Soy-braised kabocha</h3>
-                    <p class="cp-recipe-pitch">Sweet squash, soy, and ginger — low and slow in clay until it collapses into itself.</p>
-                    <p class="cp-recipe-label">Ingredients</p>
-                    <ul class="cp-recipe-list">
-                        <li>½ kabocha squash, cut into wedges</li>
-                        <li>3 tbsp soy sauce</li>
-                        <li>1 tbsp dark soy sauce</li>
-                        <li>1 tbsp mirin or sugar</li>
-                        <li>1 cup water or dashi</li>
-                        <li>3 slices fresh ginger</li>
-                    </ul>
-                    <!-- TODO: confirm skin-on or skin-off preference -->
-                    <p class="cp-recipe-label">Method</p>
-                    <ol class="cp-recipe-steps">
-                        <li>Combine soy sauces, mirin, water, and ginger in the pot. Bring to a simmer.</li>
-                        <li>Add kabocha wedges skin-side up. Cover and braise on low 20–25 minutes.</li>
-                        <li>Flip, cook uncovered 5 more minutes to reduce the glaze. Serve from the pot.</li>
-                    </ol>
-                </div>
+      <div class="process-step">
+        <span class="step-num">03</span>
+        <h3>Deposit, then clay</h3>
+        <p>A deposit locks in your place in the queue. After that the clay comes out and the real work starts.</p>
+      </div>
 
-            </div>
-            </div><!-- /cp-recipes-wrap -->
+      <div class="process-step">
+        <span class="step-num">04</span>
+        <h3>Six to eight weeks of making</h3>
+        <p>Base and lid get thrown, dried, trimmed, bisque-fired, sanded, glazed, and fired again. Progress photos along the way.</p>
+      </div>
+
+      <div class="process-step">
+        <span class="step-num">05</span>
+        <h3>Done. Cook something.</h3>
+        <p>Your pot arrives ready to season and use. The first meal is yours to decide.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ─── Three easy recipes ─── -->
+  <div class="cp-white-section" data-reveal>
+    <div class="cp-white-section-inner">
+      <h2>Three easy recipes</h2>
+      <div class="cp-recipes-wrap">
+      <div class="cp-recipes">
+
+        <!-- Recipe 1: Claypot rice -->
+        <div class="cp-recipe-card">
+          <div class="cp-icon-stamp">
+            <!-- Bowl with rice and chopsticks -->
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
+              <path d="M9 24H39"/>
+              <path d="M11 24Q12 37 24 39Q36 37 37 24"/>
+              <ellipse cx="19" cy="17" rx="2" ry="3.5" transform="rotate(-15 19 17)"/>
+              <ellipse cx="24" cy="15" rx="2" ry="3.5"/>
+              <ellipse cx="29" cy="17" rx="2" ry="3.5" transform="rotate(15 29 17)"/>
+              <line x1="15" y1="9" x2="18" y2="22"/>
+              <line x1="20" y1="7" x2="22" y2="22"/>
+            </svg>
+          </div>
+          <h3 class="cp-recipe-name">Claypot rice</h3>
+          <p class="cp-recipe-pitch">The original use — rice and toppings cooked until the bottom crackles.</p>
+          <p class="cp-recipe-label">Ingredients</p>
+          <ul class="cp-recipe-list">
+            <li>2 cups jasmine rice</li>
+            <li>2½ cups water</li>
+            <li>Lapcheung (Chinese sausage), sliced</li>
+            <li>Chinese bacon, sliced</li>
+            <li>Pickled vegetables</li>
+            <li>Soy sauce + dark soy sauce</li>
+            <li>Sugar, salt, MSG to taste</li>
+          </ul>
+          <p class="cp-recipe-label">Method</p>
+          <ol class="cp-recipe-steps">
+            <li>Rinse rice and add to pot with water and your toppings.</li>
+            <li>Bring to a boil over medium-high heat, then lid on and reduce to low.</li>
+            <li>Cook 12–15 minutes. Check by smell and sound — a faint crackle, not a burn.</li>
+            <li>Mix soy sauce, dark soy, a pinch of sugar, salt, and MSG. Pour over and serve straight from the pot.</li>
+          </ol>
         </div>
-    </div>
 
-    <!-- ─── Care + first use ─── -->
-    <div class="donabe-process">
-        <h2>Care + first use</h2>
-        <ul class="cp-care-list">
-            <li>Rinse before every use — a brief rinse keeps the pores clear.</li>
-            <li>Soak for 30 minutes before first use by submerging fully in cold water.</li>
-            <li>Season with rice porridge: fill halfway with water and a handful of rice, simmer on low 30 minutes, let cool, then discard.</li>
-            <li>Hand-wash only — no dishwasher, no soap. Rinse with hot water and let air dry completely before storing.</li>
-            <li>Never thermal-shock the pot — always start on low heat and warm up gradually. No cold water into a hot pot.</li>
-        </ul>
-    </div>
+        <!-- Recipe 2: Miso mushroom hot pot -->
+        <div class="cp-recipe-card">
+          <div class="cp-icon-stamp">
+            <!-- Pot with steam curls -->
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
+              <path d="M17 15 Q14 11 17 8 Q20 5 17 2" stroke-width="1.5"/>
+              <path d="M31 15 Q28 11 31 8 Q34 5 31 2" stroke-width="1.5"/>
+              <ellipse cx="24" cy="21" rx="14" ry="4"/>
+              <path d="M10 21Q9 35 24 37Q39 35 38 21"/>
+              <path d="M10 24Q6 24 6 28Q6 32 10 32" stroke-linecap="round"/>
+              <path d="M38 24Q42 24 42 28Q42 32 38 32" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="cp-recipe-name">Miso mushroom hot pot</h3>
+          <p class="cp-recipe-pitch">Umami-forward broth with earthy mushrooms — the claypot holds heat at the table.</p>
+          <p class="cp-recipe-label">Ingredients</p>
+          <ul class="cp-recipe-list">
+            <li>4 cups dashi or water</li>
+            <li>3 tbsp white miso</li>
+            <li>Mixed mushrooms (shiitake, enoki, king oyster)</li>
+            <li>Tofu, sliced</li>
+            <li>Green onion, sesame oil to finish</li>
+          </ul>
+          <!-- TODO: confirm quantities and any additional aromatics -->
+          <p class="cp-recipe-label">Method</p>
+          <ol class="cp-recipe-steps">
+            <li>Bring dashi to a simmer in the pot. Whisk in miso until dissolved.</li>
+            <li>Add mushrooms and tofu. Cook 5–8 minutes on low.</li>
+            <li>Finish with sliced green onion and a drizzle of sesame oil. Bring the pot straight to the table.</li>
+          </ol>
+        </div>
 
-    <!-- ─── Closing CTA ─── -->
-    <div class="cp-closing">
-        <h2>Ready to cook with one?</h2>
-        <a href="order.html" class="cp-cta-btn">Order yours →</a>
+        <!-- Recipe 3: Soy-braised kabocha -->
+        <div class="cp-recipe-card">
+          <div class="cp-icon-stamp">
+            <!-- Mushroom (placeholder — swap for kabocha icon) -->
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
+              <path d="M12 27 Q10 14 24 12 Q38 14 36 27Z"/>
+              <line x1="14" y1="27" x2="16" y2="33"/>
+              <line x1="24" y1="27" x2="24" y2="35"/>
+              <line x1="34" y1="27" x2="32" y2="33"/>
+              <path d="M20 33 Q19 41 24 43 Q29 41 28 33"/>
+            </svg>
+          </div>
+          <h3 class="cp-recipe-name">Soy-braised kabocha</h3>
+          <p class="cp-recipe-pitch">Sweet squash, soy, and ginger — low and slow in clay until it collapses into itself.</p>
+          <p class="cp-recipe-label">Ingredients</p>
+          <ul class="cp-recipe-list">
+            <li>½ kabocha squash, cut into wedges</li>
+            <li>3 tbsp soy sauce</li>
+            <li>1 tbsp dark soy sauce</li>
+            <li>1 tbsp mirin or sugar</li>
+            <li>1 cup water or dashi</li>
+            <li>3 slices fresh ginger</li>
+          </ul>
+          <!-- TODO: confirm skin-on or skin-off preference -->
+          <p class="cp-recipe-label">Method</p>
+          <ol class="cp-recipe-steps">
+            <li>Combine soy sauces, mirin, water, and ginger in the pot. Bring to a simmer.</li>
+            <li>Add kabocha wedges skin-side up. Cover and braise on low 20–25 minutes.</li>
+            <li>Flip, cook uncovered 5 more minutes to reduce the glaze. Serve from the pot.</li>
+          </ol>
+        </div>
+
+      </div>
+      </div><!-- /cp-recipes-wrap -->
     </div>
+  </div>
+
+  <!-- ─── Care + first use ─── -->
+  <div class="donabe-process" data-reveal>
+    <h2>Care + first use</h2>
+    <ul class="cp-care-list">
+      <li>Rinse before every use — a brief rinse keeps the pores clear.</li>
+      <li>Soak for 30 minutes before first use by submerging fully in cold water.</li>
+      <li>Season with rice porridge: fill halfway with water and a handful of rice, simmer on low 30 minutes, let cool, then discard.</li>
+      <li>Hand-wash only — no dishwasher, no soap. Rinse with hot water and let air dry completely before storing.</li>
+      <li>Never thermal-shock the pot — always start on low heat and warm up gradually. No cold water into a hot pot.</li>
+    </ul>
+  </div>
+
+  <!-- ─── Closing CTA ─── -->
+  <div class="cp-closing" data-reveal>
+    <h2>Ready to cook with one?</h2>
+    <a href="order.html" class="cp-cta-btn">Order yours →</a>
+  </div>
 
 </main>
 
-<footer>
-    <p>&copy; 2025 Kavin Lam. All rights reserved.</p>
+<footer class="page foot">
+  <div>&copy; 2025 Kavin Lam &middot; made in Atlanta</div>
+  <div><a href="contact.html" class="link-arrow">contact</a></div>
 </footer>
 
+<script>
+(function(){
+  const h=document.querySelector('.nav-hamburger'),d=document.querySelector('.nav-mobile-drawer');
+  h.addEventListener('click',()=>{
+    const open=d.classList.toggle('is-open');
+    h.classList.toggle('is-open',open);
+    document.body.style.overflow=open?'hidden':'';
+  });
+  d.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+    d.classList.remove('is-open');h.classList.remove('is-open');
+    document.body.style.overflow='';
+  }));
+  const reduced=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  if(reduced){document.querySelectorAll('[data-reveal]').forEach(el=>el.classList.add('is-revealed'));}
+  else{
+    const io=new IntersectionObserver(entries=>{
+      entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-revealed');io.unobserve(e.target);}});
+    },{threshold:0.08});
+    document.querySelectorAll('[data-reveal]').forEach(el=>io.observe(el));
+  }
+})();
+</script>
 </body>
 </html>

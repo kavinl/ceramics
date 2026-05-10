@@ -1,78 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Commissions - Custom Handmade Ceramics | Kavin Lam Atlanta</title>
-    <meta name="description" content="Commission custom handmade ceramic pottery from Atlanta ceramic artist Kavin Lam. Learn about the commission process for functional vessels and sculptural forms.">
-    <meta name="keywords" content="ceramic commissions, custom pottery, commission ceramics Atlanta, custom handmade pottery, pottery commissions">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Commissions - Custom Handmade Ceramics | Kavin Lam Atlanta</title>
+  <meta name="description" content="Commission custom handmade ceramic pottery from Atlanta ceramic artist Kavin Lam. Learn about the commission process for functional vessels and sculptural forms.">
+  <meta name="keywords" content="ceramic commissions, custom pottery, commission ceramics Atlanta, custom handmade pottery, pottery commissions">
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://kavinlam.com/commissions.html">
-    <meta property="og:title" content="Commissions - Custom Handmade Ceramics">
-    <meta property="og:description" content="Commission custom handmade ceramic pottery from Atlanta ceramic artist Kavin Lam.">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kavinlam.com/commissions.html">
+  <meta property="og:title" content="Commissions - Custom Handmade Ceramics">
+  <meta property="og:description" content="Commission custom handmade ceramic pottery from Atlanta ceramic artist Kavin Lam.">
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary">
-    <meta property="twitter:url" content="https://kavinlam.com/commissions.html">
-    <meta property="twitter:title" content="Commissions - Custom Handmade Ceramics">
-    <meta property="twitter:description" content="Commission custom handmade ceramic pottery from Atlanta ceramic artist Kavin Lam.">
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary">
+  <meta property="twitter:url" content="https://kavinlam.com/commissions.html">
+  <meta property="twitter:title" content="Commissions - Custom Handmade Ceramics">
+  <meta property="twitter:description" content="Commission custom handmade ceramic pottery from Atlanta ceramic artist Kavin Lam.">
 
-    <link rel="canonical" href="https://kavinlam.com/commissions.html">
-    <link rel="stylesheet" href="styles.css">
+  <link rel="canonical" href="https://kavinlam.com/commissions.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Work+Sans:wght@300;400&display=swap" rel="stylesheet">
+
+  <style>
+:root {
+  --paper:#FAFAFA; --warm-tint:#F8F4EE; --ink:#1A1A1A; --ink-soft:#333;
+  --muted:#999; --hairline:#E8E8E8; --kiln:#B8674E; --kiln-deep:#8E4A36;
+  --teal:#5FA39E; --matcha:#A8C49A;
+  --font-display:'Cormorant Garamond','Cormorant',Georgia,serif;
+  --font-sans:'Work Sans',-apple-system,sans-serif;
+  --dur-quick:240ms; --dur-base:400ms; --dur-slow:700ms;
+  --ease-entrance:cubic-bezier(.16,1,.3,1);
+  --ease-standard:cubic-bezier(.4,0,.2,1);
+  --ease-organic:cubic-bezier(.45,0,.55,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{overflow-x:clip}
+body{background:var(--warm-tint);color:var(--ink);font-family:var(--font-sans);
+  font-weight:300;-webkit-font-smoothing:antialiased;line-height:1.6;overflow-x:clip}
+a{color:inherit;text-decoration:none}
+.page{max-width:1400px;margin:0 auto;padding:0 9rem}
+.eyebrow{font-size:.72rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-weight:400}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 9rem;
+  border-bottom:1px solid var(--hairline);background:rgba(248,244,238,.92);
+  backdrop-filter:blur(10px);position:sticky;top:0;z-index:50}
+.brand{font-family:var(--font-display);font-size:1.25rem;letter-spacing:.5px;font-weight:400}
+.nav-links{display:flex;gap:2.5rem;font-size:.78rem;letter-spacing:1.5px;
+  text-transform:uppercase;color:var(--ink-soft)}
+.nav-links a{transition:color var(--dur-quick) var(--ease-standard)}
+.nav-links a:hover,.nav-links a.active{color:var(--ink)}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;
+  border:none;cursor:pointer;padding:4px}
+.nav-hamburger span{display:block;width:22px;height:1px;background:var(--ink);
+  transition:transform var(--dur-base) var(--ease-standard),opacity var(--dur-base) var(--ease-standard)}
+.nav-hamburger.is-open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.nav-hamburger.is-open span:nth-child(2){opacity:0}
+.nav-hamburger.is-open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.nav-mobile-drawer{display:none;position:fixed;inset:0;background:var(--warm-tint);
+  z-index:49;padding:6rem 2rem 2rem;flex-direction:column;gap:2rem}
+.nav-mobile-drawer.is-open{display:flex}
+.nav-mobile-drawer a{font-size:2rem;font-family:var(--font-display);font-weight:300;
+  color:var(--ink);border-bottom:1px solid var(--hairline);padding-bottom:1.25rem}
+.btn{display:inline-block;padding:1rem 2rem;background:var(--ink);color:var(--paper);
+  font-size:.74rem;letter-spacing:1.8px;text-transform:uppercase;border:1px solid var(--ink);
+  cursor:pointer;transition:background var(--dur-quick) var(--ease-standard),
+  color var(--dur-quick) var(--ease-standard),border-color var(--dur-quick) var(--ease-standard)}
+.btn:hover{background:var(--kiln-deep);border-color:var(--kiln-deep)}
+.link-arrow{font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--ink);position:relative;padding-bottom:4px}
+.link-arrow::after{content:'';position:absolute;left:0;bottom:0;height:1px;width:100%;
+  background:currentColor;transform-origin:left center;
+  transition:transform var(--dur-base) var(--ease-standard)}
+.link-arrow:hover{color:var(--kiln)}
+.link-arrow:hover::after{transform-origin:right center;transform:scaleX(0)}
+.foot{padding:3rem 0 2rem;display:flex;justify-content:space-between;align-items:center;
+  font-size:.74rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);
+  border-top:1px solid var(--hairline);margin-top:4rem}
+[data-reveal]{opacity:0;transform:translateY(20px);
+  transition:opacity var(--dur-slow) var(--ease-entrance),transform var(--dur-slow) var(--ease-entrance)}
+[data-reveal].is-revealed{opacity:1;transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+  [data-reveal]{opacity:1;transform:none}}
+@media(max-width:1200px){.page{padding:0 6rem}.nav{padding:1.5rem 6rem}}
+@media(max-width:960px){.page{padding:0 3.5rem}.nav{padding:1.5rem 3.5rem}}
+@media(max-width:640px){
+  .page{padding:0 1.75rem}.nav{padding:1rem 1.75rem}
+  .nav-links{display:none}.nav-hamburger{display:flex}
+  .foot{flex-direction:column;gap:.75rem;align-items:flex-start;padding:2rem 0 1.5rem}}
+@media(max-width:400px){.page{padding:0 1.25rem}.nav{padding:1rem 1.25rem}}
+
+/* ── Commissions page specific ── */
+.comm-hero{background:#ECDFCB;padding:5rem 9rem}
+.comm-hero-inner{max-width:1400px;margin:0 auto;display:grid;
+  grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.comm-hero-left .eyebrow{margin-bottom:1rem}
+.comm-hero-left h1{font-family:var(--font-display);font-size:clamp(2.5rem,5vw,4rem);
+  font-weight:300;letter-spacing:.5px;line-height:1.1;margin-bottom:1.25rem}
+.comm-hero-left p{font-size:1rem;line-height:1.8;color:var(--ink-soft);
+  font-weight:300;margin-bottom:2rem}
+.comm-hero-ctas{display:flex;align-items:center;gap:2rem;flex-wrap:wrap}
+.comm-hero-right{display:flex;align-items:center;justify-content:center}
+.comm-hero-right img{max-width:280px;width:100%;
+  filter:drop-shadow(0 12px 32px rgba(0,0,0,.15));
+  transform:rotate(4deg)}
+
+.comm-sections{padding:5rem 0}
+.comm-section{border-top:1px solid var(--hairline);padding:3.5rem 0}
+.comm-section:first-child{border-top:none;padding-top:0}
+.comm-section .eyebrow{margin-bottom:.75rem}
+.comm-section h2{font-family:var(--font-display);font-size:2.2rem;font-weight:300;
+  letter-spacing:.5px;margin-bottom:1.25rem}
+.comm-section p{font-size:.95rem;line-height:1.82;font-weight:300;color:var(--ink-soft);
+  margin-bottom:1rem}
+.comm-section p:last-child{margin-bottom:0}
+
+.comm-types{display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+  border-top:1px solid var(--hairline);border-left:1px solid var(--hairline);
+  margin-top:3rem}
+.comm-type{padding:2rem 1.75rem;border-right:1px solid var(--hairline);
+  border-bottom:1px solid var(--hairline)}
+.comm-type h3{font-family:var(--font-display);font-size:1.2rem;font-weight:400;
+  letter-spacing:.3px;margin-bottom:.5rem}
+.comm-type p{font-size:.85rem;font-weight:300;color:var(--muted);line-height:1.65}
+
+.comm-get-started{background:var(--paper);border:1px solid var(--hairline);
+  padding:3.5rem;margin-top:3.5rem}
+.comm-email-link{display:block;font-family:var(--font-display);font-style:italic;
+  font-size:2rem;font-weight:300;color:var(--ink);margin:1.25rem 0 2rem;
+  transition:color var(--dur-quick) var(--ease-standard)}
+.comm-email-link:hover{color:var(--kiln)}
+
+@media(max-width:1200px){.comm-hero{padding:5rem 6rem}}
+@media(max-width:960px){
+  .comm-hero{padding:4rem 3.5rem}
+  .comm-hero-inner{grid-template-columns:1fr;gap:3rem}
+  .comm-hero-right{display:none}
+  .comm-types{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:640px){
+  .comm-hero{padding:3rem 1.75rem}
+  .comm-types{grid-template-columns:1fr}
+  .comm-get-started{padding:2rem 1.75rem}
+  .comm-email-link{font-size:1.5rem}
+}
+@media(max-width:400px){.comm-hero{padding:2.5rem 1.25rem}}
+  </style>
 </head>
 <body>
-    <nav class="main-nav">
-        <div class="nav-content">
-            <a href="index.html" class="logo">Kavin Lam</a>
-            <div class="nav-links">
-                <a href="index.html">Work</a>
-                <a href="about.html">About</a>
-                <a href="claypot.html">Claypot</a>
-                <a href="commissions.html" class="active">Commissions</a>
-                <a href="contact.html">Contact</a>
-            </div>
+
+<nav class="nav">
+  <a href="index.html" class="brand">Kavin Lam</a>
+  <div class="nav-links">
+    <a href="claypot.html">claypot</a>
+    <a href="index.html#vessels">vessels</a>
+    <a href="commissions.html" class="active">commissions</a>
+    <a href="about.html">about</a>
+    <a href="order.html">order</a>
+  </div>
+  <button class="nav-hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="nav-mobile-drawer">
+  <a href="claypot.html">Claypot</a>
+  <a href="index.html#vessels">Vessels</a>
+  <a href="commissions.html">Commissions</a>
+  <a href="about.html">About</a>
+  <a href="order.html">Order</a>
+</div>
+
+<!-- Hero panel -->
+<div class="comm-hero" data-reveal>
+  <div class="comm-hero-inner">
+    <div class="comm-hero-left">
+      <p class="eyebrow">commissions &middot; open</p>
+      <h1>Let's make something.</h1>
+      <p>I accept commissions for custom ceramic work. Each piece is made individually on the pottery wheel, following the same deliberate process as my other work — jars, vases, lidded containers, bowls, and beyond.</p>
+      <div class="comm-hero-ctas">
+        <a href="mailto:kavinlam327@gmail.com" class="btn">start a commission &rarr;</a>
+        <a href="contact.html" class="link-arrow">ask a question</a>
+      </div>
+    </div>
+    <div class="comm-hero-right">
+      <img src="assets/claypot-A-face-steam-tangerine.svg" alt="Clay pot character" aria-hidden="true">
+    </div>
+  </div>
+</div>
+
+<!-- Content sections -->
+<div class="page">
+  <div class="comm-sections">
+
+    <div class="comm-section" data-reveal>
+      <p class="eyebrow">what I make</p>
+      <h2>What I Make</h2>
+      <p>I work with functional forms—jars, lidded containers, vases, large objects, bowls and more. These are pieces meant to be used and displayed.</p>
+      <p>Commissions can specify size, form, glaze choice, and clay body. I work with brown stoneware, white stoneware, Lizella clay, and occasionally porcelain. Glaze options include shino, floating blue, Alberta slip, and others depending on the desired cone temperature.</p>
+
+      <div class="comm-types">
+        <div class="comm-type">
+          <h3>Donabe &amp; Custom Dimensions</h3>
+          <p>Wheel-thrown cooking vessels sized to your table and tradition.</p>
         </div>
-    </nav>
-
-    <main class="about-container">
-        <div class="about-image">
-            <img src="images/comissions-image1.jpeg" alt="Custom handmade ceramic pottery - Commission work by Kavin Lam">
+        <div class="comm-type">
+          <h3>Tea Sets &amp; Pour-Overs</h3>
+          <p>Functional pourers and cups made as a cohesive set.</p>
         </div>
-
-        <div class="about-content">
-            <h1>Commissions</h1>
-
-            <p>I accept commissions for custom ceramic work. Each commissioned piece is made individually on the pottery wheel, following the same deliberate process as my other work.</p>
-
-            <h2>What I Make</h2>
-            <p>I work with functional forms—jars, lidded containers, vases, large objects, bowls and more. These are pieces meant to be used and displayed.</p>
-
-            <p>Commissions can specify size, form, glaze choice, and clay body. I work with brown stoneware, white stoneware, Lizella clay, and occasionally porcelain. Glaze options include shino, floating blue, Alberta slip, and others depending on the desired cone temperature.</p>
-
-            <h2>Timeline</h2>
-            <p>The ceramic process is inherently slow. From the initial throwing to final firing, a commissioned piece typically takes 4-6 weeks. This accounts for drying time, bisque firing, glazing, and the final glaze firing schedule at Callonwalde in Atlanta.</p>
-
-            <p>Rush orders aren't possible without risking the quality of the work.</p>
-
-            <h2>Process</h2>
-            <p>I love to work collaboratively with you to determine what is possible. Commission work begins with a conversation about what you're looking for—form, size, intended use, and aesthetic preferences. I'll provide input on what's feasible and how different clay bodies and glazes will affect the final piece.</p>
-
-            <p>Once we agree on the direction, I'll send progress photos throughout the process. This allows for adjustments if needed. After the final firing, the completed work is ready for pickup or shipping.</p>
-
-            <h2>Pricing</h2>
-            <p>Pricing depends on size, complexity, clay body, and firing temperature. Cone 10 firings and lidded pieces require more time and planning, which affects cost. Contact me with details about what you're looking for, and I'll provide a quote.</p>
-
-            <h2>Get Started</h2>
-            <p>If you're interested in commissioning a piece, reach out via email with details about what you have in mind. Include preferred size, form, and any glaze or color preferences. I'll respond with questions and a timeline estimate.</p>
-
-            <p><a href="contact.html">Contact me here</a> or email <a href="mailto:hello@kavinlam.com">hello@kavinlam.com</a></p>
+        <div class="comm-type">
+          <h3>Matching Dinnerware Runs</h3>
+          <p>Plates, bowls, and cups in consistent form and glaze.</p>
         </div>
-    </main>
+        <div class="comm-type">
+          <h3>Memorial &amp; Wedding Pieces</h3>
+          <p>One-of-a-kind vessels made for a specific person or moment.</p>
+        </div>
+      </div>
+    </div>
 
-    <footer>
-        <p>&copy; 2025 Kavin Lam. All rights reserved.</p>
-    </footer>
+    <div class="comm-section" data-reveal>
+      <p class="eyebrow">how long it takes</p>
+      <h2>Timeline</h2>
+      <p>The ceramic process is inherently slow. From the initial throwing to final firing, a commissioned piece typically takes 4–6 weeks. This accounts for drying time, bisque firing, glazing, and the final glaze firing schedule at Callanwolde in Atlanta.</p>
+      <p>Rush orders aren't possible without risking the quality of the work.</p>
+    </div>
+
+    <div class="comm-section" data-reveal>
+      <p class="eyebrow">how we work together</p>
+      <h2>Process</h2>
+      <p>I love to work collaboratively with you to determine what is possible. Commission work begins with a conversation about what you're looking for—form, size, intended use, and aesthetic preferences. I'll provide input on what's feasible and how different clay bodies and glazes will affect the final piece.</p>
+      <p>Once we agree on the direction, I'll send progress photos throughout the process. This allows for adjustments if needed. After the final firing, the completed work is ready for pickup or shipping.</p>
+    </div>
+
+    <div class="comm-section" data-reveal>
+      <p class="eyebrow">what it costs</p>
+      <h2>Pricing</h2>
+      <p>Pricing depends on size, complexity, clay body, and firing temperature. Cone 10 firings and lidded pieces require more time and planning, which affects cost. Contact me with details about what you're looking for, and I'll provide a quote.</p>
+    </div>
+
+    <div class="comm-section" data-reveal>
+      <p class="eyebrow">ready to start</p>
+      <h2>Get Started</h2>
+      <p>If you're interested in commissioning a piece, reach out via email with details about what you have in mind. Include preferred size, form, and any glaze or color preferences. I'll respond with questions and a timeline estimate.</p>
+
+      <div class="comm-get-started">
+        <p class="eyebrow" style="margin-bottom:.5rem">email</p>
+        <a href="mailto:kavinlam327@gmail.com" class="comm-email-link">kavinlam327@gmail.com</a>
+        <a href="mailto:kavinlam327@gmail.com" class="btn">start a commission &rarr;</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="page foot">
+  <div>&copy; 2025 Kavin Lam &middot; made in Atlanta</div>
+  <div><a href="contact.html" class="link-arrow">contact</a></div>
+</footer>
+
+<script>
+(function(){
+  const h=document.querySelector('.nav-hamburger'),d=document.querySelector('.nav-mobile-drawer');
+  h.addEventListener('click',()=>{
+    const open=d.classList.toggle('is-open');
+    h.classList.toggle('is-open',open);
+    document.body.style.overflow=open?'hidden':'';
+  });
+  d.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+    d.classList.remove('is-open');h.classList.remove('is-open');
+    document.body.style.overflow='';
+  }));
+  const reduced=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  if(reduced){document.querySelectorAll('[data-reveal]').forEach(el=>el.classList.add('is-revealed'));}
+  else{
+    const io=new IntersectionObserver(entries=>{
+      entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-revealed');io.unobserve(e.target);}});
+    },{threshold:0.08});
+    document.querySelectorAll('[data-reveal]').forEach(el=>io.observe(el));
+  }
+})();
+</script>
 </body>
 </html>
