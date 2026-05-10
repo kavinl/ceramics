@@ -103,6 +103,13 @@
       position: sticky; top: 0; z-index: 50;
       max-width: 100%;
     }
+    /* On very wide screens, align nav content with the .page max-width container */
+    @media (min-width: 1688px) {
+      .nav {
+        padding-left: calc((100% - 1400px) / 2 + 9rem);
+        padding-right: calc((100% - 1400px) / 2 + 9rem);
+      }
+    }
     .brand {
       font-family: var(--font-display);
       font-size: 1.25rem;
@@ -172,7 +179,7 @@
       display: grid;
       grid-template-columns: 1.1fr 1fr;
       gap: 4rem;
-      padding: 6rem 0 5rem;
+      padding: 3.5rem 0 5rem;
       align-items: center;
       position: relative;
     }
@@ -676,7 +683,7 @@
       <span class="word" style="--i:5"><em>haul.</em></span>
     </h1>
     <p class="lede" data-reveal>
-      Wheel-thrown stoneware donabe — a single rounded vessel, made in Brooklyn, fired to cone&nbsp;10. One at a time, signed underfoot, shipped in straw.
+      Wheel-thrown stoneware donabe — a single rounded vessel, made in Brooklyn, fired to cone&nbsp;6. Made one at a time, with you in mind.
     </p>
     <div class="cta-row" data-reveal>
       <a href="order.html" class="btn" data-magnetic>Order a claypot →</a>
@@ -774,7 +781,7 @@
     <span class="eyebrow">commissions · open</span>
     <h2>tell me what<br>you'd like <em>to hold.</em></h2>
     <p>
-      A wedding gift, a heavier mug, a deeper donabe for stew. Every commission starts with an email — a few back-and-forths on form, glaze, and weight — and ends with a piece signed under your name.
+      A wedding gift, a large fruit bowl, a donabe for stew. Every commission starts with an email — a few back-and-forths on form, glaze, and weight — and ends with a piece in your home.
     </p>
     <ul class="commissions-list">
       <li>donabe, custom dimensions</li>
