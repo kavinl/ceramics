@@ -69,22 +69,26 @@
 
     /* ── Base ───────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body {
+    html {
+      /* clip instead of hidden — doesn't create a scroll-blocking context,
+         so position:sticky + iOS momentum scroll stay intact */
+      overflow-x: clip;
+    }
+    body {
       background: var(--warm-tint);
       color: var(--ink);
       font-family: var(--font-sans);
       font-weight: 300;
       -webkit-font-smoothing: antialiased;
       line-height: 1.6;
-      overflow-x: hidden;
+      overflow-x: clip;
     }
     a { color: inherit; text-decoration: none; }
 
-    /* page wrapper — 7rem side padding, up from 5rem */
     .page {
       max-width: 1400px;
       margin: 0 auto;
-      padding: 0 7rem;
+      padding: 0 9rem;
     }
 
     /* ── Nav ───────────────────────────────────────── */
@@ -92,7 +96,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1.5rem 7rem;
+      padding: 1.5rem 9rem;
       border-bottom: 1px solid var(--hairline);
       background: rgba(248,244,238,.92);
       backdrop-filter: blur(10px);
@@ -405,6 +409,7 @@
       background: var(--warm-tint);
       transform: translateY(0);
       transition: transform 900ms cubic-bezier(.7,0,.3,1);
+      pointer-events: none; /* don't intercept taps or scroll gestures */
     }
     .vessel.is-revealed .vessel-frame::after { transform: translateY(-101%); }
 
@@ -429,7 +434,7 @@
         radial-gradient(90% 70% at 10% 100%, rgba(168,196,154,.08) 0%, transparent 60%),
         #ECDFCB;
       color: var(--ink);
-      padding: 5rem 7rem;
+      padding: 5rem 9rem;
       margin: 5rem 0 0;
       display: grid;
       grid-template-columns: 1.1fr .9fr;
@@ -554,68 +559,78 @@
       .vessel-frame::after { display: none; }
     }
 
-    /* ── Responsive — tablet (≤ 1100px) ───────────── */
-    @media (max-width: 1100px) {
-      .page { padding: 0 4rem; }
-      .nav { padding: 1.5rem 4rem; }
-      .commissions { padding: 4rem; }
+    /* ── Responsive — tablet (≤ 1200px) ───────────── */
+    @media (max-width: 1200px) {
+      .page { padding: 0 6rem; }
+      .nav { padding: 1.5rem 6rem; }
+      .commissions { padding: 5rem 6rem; }
     }
 
-    /* ── Responsive — large mobile / small tablet (≤ 900px) ── */
-    @media (max-width: 900px) {
-      .page { padding: 0 2rem; }
-      .nav { padding: 1.25rem 2rem; }
-      .commissions { padding: 3rem 2rem; grid-template-columns: 1fr; gap: 2rem; }
-      .commissions-list { grid-template-columns: 1fr; }
+    /* ── Responsive — small tablet (≤ 960px) ────────── */
+    @media (max-width: 960px) {
+      .page { padding: 0 3.5rem; }
+      .nav { padding: 1.5rem 3.5rem; }
+      .commissions { padding: 4rem 3.5rem; grid-template-columns: 1fr; gap: 2.5rem; }
+      .commissions-list { grid-template-columns: 1fr 1fr; }
       .commissions-art { display: none; }
 
       .hero { grid-template-columns: 1fr; gap: 2.5rem; padding: 3rem 0 3.5rem; }
       .hero h1 { font-size: clamp(2.4rem, 8vw, 3.2rem); }
       .hero p.lede { max-width: none; }
-      .hero-art { aspect-ratio: unset; max-width: 400px; margin: 0 auto; padding-bottom: 1rem; }
+      .hero-art { aspect-ratio: unset; max-width: 440px; margin: 0 auto; padding-bottom: 1rem; }
       .hero-meta { gap: 1.5rem; flex-wrap: wrap; }
 
-      .vessels { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+      .vessels { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
       .vessel:nth-child(n) { margin-top: 0; }
-      .vessel:nth-child(2) { margin-top: 1.5rem; }
-      .vessel:nth-child(4) { margin-top: 1.5rem; }
+      .vessel:nth-child(2) { margin-top: 2rem; }
+      .vessel:nth-child(4) { margin-top: 2rem; }
 
       .section { padding: 3.5rem 0; }
       .section-head { flex-direction: column; align-items: flex-start; margin-bottom: 2rem; }
       .section-head .right { text-align: left; max-width: none; }
 
       .cta-row { gap: 1rem; }
-      .btn { padding: 0.9rem 1.5rem; }
       .foot { flex-direction: column; gap: 0.75rem; align-items: flex-start; padding: 2rem 0 1.5rem; }
     }
 
-    /* ── Responsive — mobile (≤ 600px) ─────────────── */
-    @media (max-width: 600px) {
-      .page { padding: 0 1.25rem; }
-      .nav { padding: 1rem 1.25rem; }
+    /* ── Responsive — mobile (≤ 640px) ─────────────── */
+    @media (max-width: 640px) {
+      .page { padding: 0 1.75rem; }
+      .nav { padding: 1rem 1.75rem; }
       .nav-links { display: none; }
       .nav-hamburger { display: flex; }
-      .commissions { padding: 2.5rem 1.25rem; margin: 3rem 0 0; }
-      .commissions-cta { flex-direction: column; align-items: flex-start; }
-      .cta-row { flex-direction: column; align-items: flex-start; }
+
+      .commissions { padding: 3rem 1.75rem; margin: 3rem 0 0; }
+      .commissions-list { grid-template-columns: 1fr; }
+      .commissions-cta { flex-direction: column; align-items: flex-start; gap: 1rem; }
 
       .hero { padding: 2.5rem 0 3rem; gap: 2rem; }
       .hero h1 { font-size: clamp(2.2rem, 10vw, 2.8rem); }
-      .hero-art { max-width: 320px; }
+      .hero p.lede { font-size: 1rem; }
+      .hero-art { max-width: 340px; }
+      .hero-meta { gap: 1.25rem; }
+      /* stack CTA on mobile for easier tapping */
+      .cta-row { flex-direction: column; align-items: flex-start; }
+      .btn { width: 100%; text-align: center; padding: 1rem; }
 
-      .vessels { grid-template-columns: 1fr 1fr; gap: 1rem; }
-      .vessel:nth-child(2) { margin-top: 1.25rem; }
-      .vessel:nth-child(4) { margin-top: 1.25rem; }
-      .vessel-name { font-size: 0.95rem; }
+      .vessels { grid-template-columns: 1fr 1fr; gap: 0.875rem; }
+      .vessel:nth-child(2) { margin-top: 1.5rem; }
+      .vessel:nth-child(4) { margin-top: 1.5rem; }
+      .vessel-name { font-size: 0.9rem; }
+      .vessel-price { font-size: 0.72rem; }
 
-      .section-head h2 { font-size: clamp(1.6rem, 8vw, 2.2rem); }
-      .commissions h2 { font-size: clamp(1.8rem, 8vw, 2.4rem); }
+      .section-head h2 { font-size: clamp(1.7rem, 7vw, 2.2rem); }
+      .commissions h2 { font-size: clamp(1.9rem, 7vw, 2.4rem); }
     }
 
     /* ── Responsive — small mobile (≤ 400px) ───────── */
     @media (max-width: 400px) {
-      .vessels { grid-template-columns: 1fr; }
+      .page { padding: 0 1.25rem; }
+      .nav { padding: 1rem 1.25rem; }
+      .commissions { padding: 2.5rem 1.25rem; }
+      .vessels { grid-template-columns: 1fr; gap: 1.25rem; }
       .vessel:nth-child(n) { margin-top: 0; }
+      .hero-art { max-width: 280px; }
     }
   </style>
 </head>
@@ -803,33 +818,35 @@
     });
   });
 
-  // reveal-on-scroll
+  // reveal-on-scroll — no stagger delay so elements never block scroll
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reduced) {
-    document.querySelectorAll('[data-reveal]').forEach(el => el.classList.add('is-revealed'));
-    document.querySelectorAll('.vessel').forEach(el => el.classList.add('is-revealed'));
+    document.querySelectorAll('[data-reveal], .vessel').forEach(el => el.classList.add('is-revealed'));
   } else {
     const io = new IntersectionObserver((entries) => {
-      entries.forEach((entry, i) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          setTimeout(() => entry.target.classList.add('is-revealed'), i * 80);
+          entry.target.classList.add('is-revealed');
           io.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12 });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
     document.querySelectorAll('[data-reveal], .vessel').forEach(el => io.observe(el));
   }
 
-  // magnetic CTA
-  document.querySelectorAll('[data-magnetic]').forEach(btn => {
-    btn.addEventListener('mousemove', (e) => {
-      const r = btn.getBoundingClientRect();
-      const x = (e.clientX - r.left - r.width  / 2) * 0.25;
-      const y = (e.clientY - r.top  - r.height / 2) * 0.25;
-      btn.style.transform = `translate(${x}px, ${y}px)`;
+  // magnetic CTA — mouse-only, skip entirely on touch devices
+  const isTouch = matchMedia('(hover: none)').matches;
+  if (!isTouch) {
+    document.querySelectorAll('[data-magnetic]').forEach(btn => {
+      btn.addEventListener('mousemove', (e) => {
+        const r = btn.getBoundingClientRect();
+        const x = (e.clientX - r.left - r.width  / 2) * 0.25;
+        const y = (e.clientY - r.top  - r.height / 2) * 0.25;
+        btn.style.transform = `translate(${x}px, ${y}px)`;
+      });
+      btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
     });
-    btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
-  });
+  }
 })();
 </script>
 
