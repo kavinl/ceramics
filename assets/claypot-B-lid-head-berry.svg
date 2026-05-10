@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 250" width="200" height="250">
+  <title>Claypot — B — lid is the head (berry)</title>
+  
+  <path fill="#C95C5C" opacity="0.85" d="M52 116 Q56 84 106 82 Q156 84 158 116 Z"></path>
+
+  
+  <path fill="none" stroke="#1A1A1A" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" d="M40 130 Q34 150 42 170 Q60 192 100 195 Q140 192 158 170 Q166 150 160 130 L160 110 L40 110 Z"></path>
+  
+  <path fill="none" stroke="#1A1A1A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" d="M44 110 L156 110"></path>
+  
+  <path fill="none" stroke="#1A1A1A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M40 116 L28 118 L28 132 L40 134"></path>
+  <path fill="none" stroke="#1A1A1A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M160 116 L172 118 L172 132 L160 134"></path>
+  
+  <path fill="none" stroke="#1A1A1A" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" d="M48 110 Q50 78 100 76 Q150 78 152 110"></path>
+  
+  <path fill="none" stroke="#1A1A1A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" d="M50 102 Q100 96 150 102"></path>
+  
+  <path fill="none" stroke="#1A1A1A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M93 76 Q93 67 100 65 Q107 67 107 76"></path>
+  
+  <path fill="none" stroke="#1A1A1A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" d="M58 196 Q100 200 142 196"></path>
+  
+  <path fill="none" stroke="#1A1A1A" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" d="M78 96 q5 5 12 0"></path>
+  <path fill="none" stroke="#1A1A1A" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" d="M108 96 q5 5 12 0"></path>
+  
+  <path fill="none" stroke="#1A1A1A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M93 108 q7 4 14 0"></path>
+  
+  <path fill="none" stroke="#1A1A1A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M44 108 q-8 -4 -10 -14 q-2 -10 6 -14"></path>
+  <path fill="none" stroke="#1A1A1A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M156 108 q8 -4 10 -14 q2 -10 -6 -14"></path>
+  <path fill="none" stroke="#1A1A1A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" d="M36 90 q-4 -3 -3 -10"></path>
+  <path fill="none" stroke="#1A1A1A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" d="M164 90 q4 -3 3 -10"></path>
+</svg>

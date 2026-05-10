@@ -1,102 +1,837 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kavin Lam Ceramics - Handmade Clay Pots | Brooklyn</title>
-    <meta name="description" content="Brooklyn-based ceramic artist creating handmade clay pots rooted in Cantonese claypot rice tradition. Made to order, $250–500.">
-    <meta name="keywords" content="ceramics, pottery, Brooklyn ceramics, handmade clay pot, claypot rice, ceramic artist, stoneware, functional pottery, Brooklyn pottery">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kavin Lam Ceramics — Handmade Clay Pots | Atlanta</title>
+  <meta name="description" content="Atlanta-based ceramic artist creating handmade clay pots rooted in Cantonese claypot rice tradition. Made to order, $250–500.">
+  <meta name="keywords" content="ceramics, pottery, Atlanta ceramics, handmade clay pot, claypot rice, ceramic artist, stoneware, functional pottery, donabe">
 
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ceramics.kavinlam.com/">
-    <meta property="og:title" content="Kavin Lam Ceramics - Handmade Donabe | Atlanta">
-    <meta property="og:description" content="Custom handmade donabe, wheel-thrown in Atlanta. Made to order, $250–500.">
-    <meta property="og:image" content="https://ceramics.kavinlam.com/images/piece-1/img1.jpeg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ceramics.kavinlam.com/">
+  <meta property="og:title" content="Kavin Lam Ceramics — Handmade Clay Pots | Atlanta">
+  <meta property="og:description" content="Custom handmade donabe, wheel-thrown in Atlanta. Made to order, $250–500.">
+  <meta property="og:image" content="https://ceramics.kavinlam.com/images/piece-1/img1.jpeg">
 
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://ceramics.kavinlam.com/">
-    <meta property="twitter:title" content="Kavin Lam Ceramics - Handmade Donabe | Atlanta">
-    <meta property="twitter:description" content="Custom handmade donabe, wheel-thrown in Atlanta. Made to order, $250–500.">
-    <meta property="twitter:image" content="https://ceramics.kavinlam.com/images/piece-1/img1.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://ceramics.kavinlam.com/">
+  <meta name="twitter:title" content="Kavin Lam Ceramics — Handmade Clay Pots | Atlanta">
+  <meta name="twitter:description" content="Custom handmade donabe, wheel-thrown in Atlanta. Made to order, $250–500.">
+  <meta name="twitter:image" content="https://ceramics.kavinlam.com/images/piece-1/img1.jpeg">
 
-    <link rel="canonical" href="https://ceramics.kavinlam.com/">
-    <link rel="stylesheet" href="styles.css">
-    <script src="pieces-config.js"></script>
+  <link rel="canonical" href="https://ceramics.kavinlam.com/">
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Kavin Lam",
-      "jobTitle": "Ceramic Artist",
-      "description": "Atlanta-based ceramic artist specializing in handmade donabe and functional pottery",
-      "url": "https://ceramics.kavinlam.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Atlanta",
-        "addressRegion": "GA"
-      },
-      "sameAs": ["https://instagram.com/kavin.ceramics"]
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Kavin Lam",
+    "jobTitle": "Ceramic Artist",
+    "description": "Atlanta-based ceramic artist specializing in handmade donabe and functional pottery",
+    "url": "https://ceramics.kavinlam.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Atlanta",
+      "addressRegion": "GA"
+    },
+    "sameAs": ["https://instagram.com/kavin.ceramics"]
+  }
+  </script>
+
+  <style>
+    /* ── Tokens ─────────────────────────────────────── */
+    :root {
+      --paper:        #FAFAFA;
+      --warm-tint:    #F8F4EE;
+      --ink:          #1A1A1A;
+      --ink-soft:     #333;
+      --muted:        #999;
+      --hairline:     #E8E8E8;
+      --kiln:         #B8674E;
+      --kiln-deep:    #8E4A36;
+      --teal:         #5FA39E;
+      --matcha:       #A8C49A;
+
+      --font-display: 'Cormorant Garamond', 'Cormorant', Georgia, serif;
+      --font-sans:    'Work Sans', -apple-system, sans-serif;
+
+      --dur-quick:    240ms;
+      --dur-base:     400ms;
+      --dur-slow:     700ms;
+      --ease-entrance: cubic-bezier(.16,1,.3,1);
+      --ease-standard: cubic-bezier(.4,0,.2,1);
+      --ease-organic:  cubic-bezier(.45,0,.55,1);
     }
-    </script>
+
+    /* ── Base ───────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      background: var(--warm-tint);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    /* page wrapper — 7rem side padding, up from 5rem */
+    .page {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 7rem;
+    }
+
+    /* ── Nav ───────────────────────────────────────── */
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 7rem;
+      border-bottom: 1px solid var(--hairline);
+      background: rgba(248,244,238,.92);
+      backdrop-filter: blur(10px);
+      position: sticky; top: 0; z-index: 50;
+      max-width: 100%;
+    }
+    .brand {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      letter-spacing: 0.5px;
+      font-weight: 400;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      font-size: 0.78rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+    .nav-links a { transition: color var(--dur-quick) var(--ease-standard); }
+    .nav-links a:hover { color: var(--ink); }
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 22px;
+      height: 1px;
+      background: var(--ink);
+      transition: transform var(--dur-base) var(--ease-standard), opacity var(--dur-base) var(--ease-standard);
+    }
+    .nav-hamburger.is-open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .nav-hamburger.is-open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.is-open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+    .nav-mobile-drawer {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: var(--warm-tint);
+      z-index: 49;
+      padding: 6rem 2rem 2rem;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .nav-mobile-drawer.is-open { display: flex; }
+    .nav-mobile-drawer a {
+      font-size: 2rem;
+      font-family: var(--font-display);
+      font-weight: 300;
+      color: var(--ink);
+      border-bottom: 1px solid var(--hairline);
+      padding-bottom: 1.25rem;
+    }
+
+    /* ── Eyebrow ───────────────────────────────────── */
+    .eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 400;
+    }
+
+    /* ── Hero ──────────────────────────────────────── */
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 4rem;
+      padding: 6rem 0 5rem;
+      align-items: center;
+      position: relative;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 80vmin; height: 80vmin;
+      transform: translate(-50%,-50%);
+      background: conic-gradient(from 0deg,
+        transparent 0%,
+        rgba(184,103,78,.18) 25%,
+        transparent 50%,
+        rgba(184,103,78,.18) 75%,
+        transparent 100%);
+      border-radius: 50%;
+      filter: blur(60px);
+      z-index: -1;
+      animation: wheel-spin 90s linear infinite;
+      pointer-events: none;
+    }
+    @keyframes wheel-spin { to { transform: translate(-50%,-50%) rotate(360deg); } }
+
+    .hero-text .eyebrow { margin-bottom: 1.5rem; display: block; }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-weight: 300;
+      font-size: clamp(2.5rem, 5.4vw, 4.6rem);
+      line-height: 1.04;
+      letter-spacing: -0.5px;
+      color: var(--ink);
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 em { font-style: italic; color: var(--kiln); }
+
+    /* word-split rise animation */
+    .word {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(0.4em);
+      animation: word-rise 700ms cubic-bezier(.16,1,.3,1) forwards;
+      animation-delay: calc(var(--i,0)*70ms + 200ms);
+    }
+    @keyframes word-rise { to { opacity: 1; transform: translateY(0); } }
+
+    .hero p.lede {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--ink-soft);
+      max-width: 38ch;
+      margin-bottom: 2.5rem;
+    }
+    .hero-meta {
+      display: flex;
+      gap: 2rem;
+      font-size: 0.72rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--hairline);
+    }
+    .hero-meta b {
+      display: block;
+      color: var(--ink);
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 400;
+      text-transform: none;
+      letter-spacing: 0;
+      margin-top: 4px;
+    }
+
+    /* ── Buttons / Links ───────────────────────────── */
+    .cta-row { display: flex; gap: 1.25rem; align-items: center; flex-wrap: wrap; }
+    .btn {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background: var(--ink);
+      color: var(--paper);
+      font-size: 0.74rem;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      border: 1px solid var(--ink);
+      cursor: pointer;
+      transition:
+        background var(--dur-quick) var(--ease-standard),
+        color    var(--dur-quick) var(--ease-standard),
+        border-color var(--dur-quick) var(--ease-standard);
+    }
+    .btn:hover { background: var(--kiln-deep); border-color: var(--kiln-deep); }
+    .link-arrow {
+      font-size: 0.78rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--ink);
+      position: relative;
+      padding-bottom: 4px;
+    }
+    .link-arrow::after {
+      content: '';
+      position: absolute; left: 0; bottom: 0;
+      height: 1px; width: 100%;
+      background: currentColor;
+      transform-origin: left center;
+      transform: scaleX(1);
+      transition: transform var(--dur-base) var(--ease-standard);
+    }
+    .link-arrow:hover { color: var(--kiln); }
+    .link-arrow:hover::after { transform-origin: right center; transform: scaleX(0); }
+
+    /* magnetic CTA */
+    [data-magnetic] { display: inline-block; transition: transform var(--dur-quick) var(--ease-standard); }
+
+    /* ── Claypot hero art ──────────────────────────── */
+    .hero-art {
+      aspect-ratio: 4 / 5;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .claypot-lineup {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: end;
+      justify-items: center;
+      gap: 0.5rem;
+      padding-bottom: 0.5rem;
+      position: relative;
+    }
+    .claypot-lineup::after {
+      content: "";
+      position: absolute;
+      left: 4%; right: 4%; bottom: 0;
+      border-bottom: 1px solid var(--hairline);
+    }
+    .claypot-img {
+      width: 100%;
+      max-width: 180px;
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 18px 22px rgba(184,103,78,.12));
+      transition: transform .5s var(--ease-organic);
+    }
+    .claypot-img--berry     { transform: translateY(8px)   rotate(-3deg); }
+    .claypot-img--tangerine { transform: translateY(-12px) rotate(0deg); width: 108%; max-width: 200px; z-index: 2; }
+    .claypot-img--matcha    { transform: translateY(6px)   rotate(2.5deg); }
+
+    @keyframes pot-bob-berry {
+      0%,100% { transform: translateY(8px)   rotate(-3deg); }
+      50%     { transform: translateY(-2px)  rotate(-3deg); }
+    }
+    @keyframes pot-bob-tangerine {
+      0%,100% { transform: translateY(-12px) rotate(0deg); }
+      50%     { transform: translateY(-22px) rotate(0deg); }
+    }
+    @keyframes pot-bob-matcha {
+      0%,100% { transform: translateY(6px)   rotate(2.5deg); }
+      50%     { transform: translateY(-4px)  rotate(2.5deg); }
+    }
+    .claypot-img--berry     { animation: pot-bob-berry     7s ease-in-out infinite; }
+    .claypot-img--tangerine { animation: pot-bob-tangerine 8s ease-in-out infinite .4s; }
+    .claypot-img--matcha    { animation: pot-bob-matcha    9s ease-in-out infinite .8s; }
+
+    .hero-art:hover .claypot-img--berry     { animation-play-state: paused; transform: translateY(4px)   rotate(-5deg); }
+    .hero-art:hover .claypot-img--tangerine { animation-play-state: paused; transform: translateY(-18px) rotate(0deg); }
+    .hero-art:hover .claypot-img--matcha    { animation-play-state: paused; transform: translateY(2px)   rotate(4deg); }
+
+    /* ── Section ───────────────────────────────────── */
+    .section {
+      padding: 5rem 0;
+      border-top: 1px solid var(--hairline);
+    }
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 3rem;
+      gap: 2rem;
+    }
+    .section-head h2 {
+      font-family: var(--font-display);
+      font-weight: 300;
+      font-size: clamp(2rem, 3.4vw, 2.8rem);
+      letter-spacing: -0.3px;
+      line-height: 1.1;
+    }
+    .section-head .eyebrow { margin-bottom: 0.6rem; display: block; }
+    .section-head .right {
+      text-align: right;
+      max-width: 36ch;
+      font-size: 0.95rem;
+      color: var(--ink-soft);
+      line-height: 1.6;
+    }
+
+    /* ── Vessels grid ──────────────────────────────── */
+    .vessels {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+    .vessel {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+    }
+    .vessel-frame {
+      aspect-ratio: 4 / 5;
+      background: var(--paper);
+      border: 1px solid var(--hairline);
+      display: flex; align-items: center; justify-content: center;
+      position: relative;
+      overflow: hidden;
+      transition: border-color var(--dur-base) var(--ease-standard);
+    }
+    .vessel:hover .vessel-frame { border-color: var(--ink); }
+    .vessel-frame img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform var(--dur-slow) var(--ease-organic);
+    }
+    .vessel:hover .vessel-frame img { transform: scale(1.04) translateY(-3px); }
+
+    /* clip-reveal for vessel frames */
+    .vessel-frame::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: var(--warm-tint);
+      transform: translateY(0);
+      transition: transform 900ms cubic-bezier(.7,0,.3,1);
+    }
+    .vessel.is-revealed .vessel-frame::after { transform: translateY(-101%); }
+
+    .vessel-meta { display: flex; justify-content: space-between; padding-top: 0.75rem; }
+    .vessel-name {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 400;
+    }
+    .vessel-price { font-size: 0.78rem; letter-spacing: 1px; color: var(--muted); }
+
+    /* staggered vertical offset */
+    .vessel:nth-child(1) { margin-top: 0; }
+    .vessel:nth-child(2) { margin-top: 2.5rem; }
+    .vessel:nth-child(3) { margin-top: 0.75rem; }
+    .vessel:nth-child(4) { margin-top: 3.25rem; }
+
+    /* ── Commissions teaser ────────────────────────── */
+    .commissions {
+      background:
+        radial-gradient(120% 80% at 88% 30%, rgba(184,103,78,.10) 0%, transparent 55%),
+        radial-gradient(90% 70% at 10% 100%, rgba(168,196,154,.08) 0%, transparent 60%),
+        #ECDFCB;
+      color: var(--ink);
+      padding: 5rem 7rem;
+      margin: 5rem 0 0;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 4rem;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      border-top: 1px solid rgba(26,26,26,.10);
+      border-bottom: 1px solid rgba(26,26,26,.10);
+    }
+    .commissions::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--kiln);
+      opacity: .7;
+    }
+    .commissions::after {
+      content: "№ comm.";
+      position: absolute;
+      top: 1.25rem; right: 1.5rem;
+      font-size: 0.62rem;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      color: rgba(26,26,26,.45);
+    }
+    .commissions .eyebrow { color: var(--kiln-deep); }
+    .commissions h2 {
+      font-family: var(--font-display);
+      font-weight: 300;
+      font-size: clamp(2rem, 3.6vw, 3rem);
+      line-height: 1.1;
+      margin: 1rem 0 1.5rem;
+    }
+    .commissions h2 em { color: var(--kiln-deep); font-style: italic; }
+    .commissions p {
+      color: var(--ink-soft);
+      font-size: 1rem;
+      line-height: 1.7;
+      max-width: 42ch;
+      margin-bottom: 2rem;
+    }
+    .commissions-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem 1.5rem;
+      padding: 1.25rem 0;
+      margin-bottom: 1rem;
+      border-top: 1px solid rgba(26,26,26,.18);
+      border-bottom: 1px solid rgba(26,26,26,.18);
+    }
+    .commissions-list li {
+      font-size: 0.72rem;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      padding: 0.35rem 0 0.35rem 1.1rem;
+      position: relative;
+    }
+    .commissions-list li::before {
+      content: "·";
+      position: absolute;
+      left: 0;
+      color: var(--kiln);
+      font-size: 1.4rem;
+      line-height: 1;
+      top: .35rem;
+    }
+    .commissions-cta { margin-top: 2.25rem; display: flex; gap: 1.25rem; align-items: center; flex-wrap: wrap; }
+    .commissions .btn { background: var(--kiln-deep); border-color: var(--kiln-deep); color: #FBF6EE; }
+    .commissions .btn:hover { background: var(--ink); border-color: var(--ink); }
+    .commissions-art {
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      gap: 1.25rem;
+    }
+    .commissions-art img {
+      width: 72%;
+      max-width: 260px;
+      height: auto;
+      filter: drop-shadow(0 22px 26px rgba(142,74,54,.18));
+      transform: rotate(-2deg);
+      animation: commission-bob 8s ease-in-out infinite;
+    }
+    @keyframes commission-bob {
+      0%,100% { transform: rotate(-2deg) translateY(0); }
+      50%     { transform: rotate(-2deg) translateY(-10px); }
+    }
+
+    /* ── Footer ────────────────────────────────────── */
+    .foot {
+      padding: 3rem 0 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.74rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+      border-top: 1px solid var(--hairline);
+      margin-top: 4rem;
+    }
+
+    /* ── Reveal ────────────────────────────────────── */
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(24px);
+      transition:
+        opacity   var(--dur-slow) var(--ease-entrance),
+        transform var(--dur-slow) var(--ease-entrance);
+    }
+    [data-reveal].is-revealed { opacity: 1; transform: translateY(0); }
+
+    /* ── Reduced motion ────────────────────────────── */
+    @media (prefers-reduced-motion: reduce) {
+      *,*::before,*::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+      [data-reveal] { opacity: 1; transform: none; }
+      .vessel-frame::after { display: none; }
+    }
+
+    /* ── Responsive — tablet (≤ 1100px) ───────────── */
+    @media (max-width: 1100px) {
+      .page { padding: 0 4rem; }
+      .nav { padding: 1.5rem 4rem; }
+      .commissions { padding: 4rem; }
+    }
+
+    /* ── Responsive — large mobile / small tablet (≤ 900px) ── */
+    @media (max-width: 900px) {
+      .page { padding: 0 2rem; }
+      .nav { padding: 1.25rem 2rem; }
+      .commissions { padding: 3rem 2rem; grid-template-columns: 1fr; gap: 2rem; }
+      .commissions-list { grid-template-columns: 1fr; }
+      .commissions-art { display: none; }
+
+      .hero { grid-template-columns: 1fr; gap: 2.5rem; padding: 3rem 0 3.5rem; }
+      .hero h1 { font-size: clamp(2.4rem, 8vw, 3.2rem); }
+      .hero p.lede { max-width: none; }
+      .hero-art { aspect-ratio: unset; max-width: 400px; margin: 0 auto; padding-bottom: 1rem; }
+      .hero-meta { gap: 1.5rem; flex-wrap: wrap; }
+
+      .vessels { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+      .vessel:nth-child(n) { margin-top: 0; }
+      .vessel:nth-child(2) { margin-top: 1.5rem; }
+      .vessel:nth-child(4) { margin-top: 1.5rem; }
+
+      .section { padding: 3.5rem 0; }
+      .section-head { flex-direction: column; align-items: flex-start; margin-bottom: 2rem; }
+      .section-head .right { text-align: left; max-width: none; }
+
+      .cta-row { gap: 1rem; }
+      .btn { padding: 0.9rem 1.5rem; }
+      .foot { flex-direction: column; gap: 0.75rem; align-items: flex-start; padding: 2rem 0 1.5rem; }
+    }
+
+    /* ── Responsive — mobile (≤ 600px) ─────────────── */
+    @media (max-width: 600px) {
+      .page { padding: 0 1.25rem; }
+      .nav { padding: 1rem 1.25rem; }
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      .commissions { padding: 2.5rem 1.25rem; margin: 3rem 0 0; }
+      .commissions-cta { flex-direction: column; align-items: flex-start; }
+      .cta-row { flex-direction: column; align-items: flex-start; }
+
+      .hero { padding: 2.5rem 0 3rem; gap: 2rem; }
+      .hero h1 { font-size: clamp(2.2rem, 10vw, 2.8rem); }
+      .hero-art { max-width: 320px; }
+
+      .vessels { grid-template-columns: 1fr 1fr; gap: 1rem; }
+      .vessel:nth-child(2) { margin-top: 1.25rem; }
+      .vessel:nth-child(4) { margin-top: 1.25rem; }
+      .vessel-name { font-size: 0.95rem; }
+
+      .section-head h2 { font-size: clamp(1.6rem, 8vw, 2.2rem); }
+      .commissions h2 { font-size: clamp(1.8rem, 8vw, 2.4rem); }
+    }
+
+    /* ── Responsive — small mobile (≤ 400px) ───────── */
+    @media (max-width: 400px) {
+      .vessels { grid-template-columns: 1fr; }
+      .vessel:nth-child(n) { margin-top: 0; }
+    }
+  </style>
 </head>
+
 <body>
-    <nav class="main-nav">
-        <div class="nav-content">
-            <a href="index.html" class="logo">Kavin Lam</a>
-            <div class="nav-links">
-                <a href="index.html" class="active">Work</a>
-                <a href="about.html">About</a>
-                <a href="claypot.html">Claypot</a>
-                <a href="order.html">Order</a>
-                <a href="contact.html">Contact</a>
-            </div>
-        </div>
-    </nav>
 
-    <main class="work-grid">
-        <div class="hero-title">
-            <h1>Kavin Lam</h1>
-            <p>functional vessels and structural forms</p>
-            <div class="hero-order-note">
-                <span>now taking orders — handmade clay pots, brooklyn</span>
-                <a href="order.html" class="hero-order-link">order yours →</a>
-            </div>
-        </div>
+<!-- ── Nav ─────────────────────────────────────────── -->
+<nav class="nav">
+  <a href="index.html" class="brand">Kavin Lam</a>
+  <div class="nav-links">
+    <a href="claypot.html">claypot</a>
+    <a href="#vessels">vessels</a>
+    <a href="commissions.html">commissions</a>
+    <a href="about.html">about</a>
+    <a href="order.html">order</a>
+  </div>
+  <button class="nav-hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
 
-        <div style="position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0,0,0,0); border: 0;">
-            <h2>Handmade Ceramic Pottery Collection</h2>
-            <p>Explore handcrafted pottery and ceramics by Brooklyn-based ceramic artist Kavin Lam. Each piece is wheel-thrown stoneware, combining traditional pottery techniques with contemporary design.</p>
-        </div>
+<!-- mobile drawer -->
+<div class="nav-mobile-drawer">
+  <a href="claypot.html">Claypot</a>
+  <a href="#vessels">Vessels</a>
+  <a href="commissions.html">Commissions</a>
+  <a href="about.html">About</a>
+  <a href="order.html">Order</a>
+</div>
 
-        <div class="grid-container" id="gallery-grid"></div>
-    </main>
+<!-- ── Hero — claypot pitch ────────────────────────── -->
+<section class="page hero" id="claypot">
+  <div class="hero-text">
+    <span class="eyebrow" data-reveal>handmade · made to order</span>
+    <h1>
+      <span class="word" style="--i:0">a</span>
+      <span class="word" style="--i:1">claypot</span>
+      <span class="word" style="--i:2">for</span>
+      <span class="word" style="--i:3">the</span>
+      <span class="word" style="--i:4">long</span>
+      <span class="word" style="--i:5"><em>haul.</em></span>
+    </h1>
+    <p class="lede" data-reveal>
+      Wheel-thrown stoneware donabe — a single rounded vessel, made in Atlanta, fired to cone&nbsp;10. One at a time, signed underfoot, shipped in straw.
+    </p>
+    <div class="cta-row" data-reveal>
+      <a href="order.html" class="btn" data-magnetic>Order a claypot →</a>
+      <a href="#vessels" class="link-arrow">browse vessels</a>
+    </div>
+    <div class="hero-meta" data-reveal>
+      <div>
+        <span>price</span>
+        <b>$250–500</b>
+      </div>
+      <div>
+        <span>lead time</span>
+        <b>3–4 weeks</b>
+      </div>
+      <div>
+        <span>made in</span>
+        <b>Atlanta, GA</b>
+      </div>
+    </div>
+  </div>
 
-    <footer>
-        <p>&copy; 2025 Kavin Lam. All rights reserved.</p>
-    </footer>
+  <div class="hero-art" data-reveal>
+    <div class="claypot-lineup">
+      <img class="claypot-img claypot-img--berry"
+           src="assets/claypot-B-lid-head-berry.svg"
+           alt="Berry-glazed claypot with rounded lid" />
+      <img class="claypot-img claypot-img--tangerine"
+           src="assets/claypot-A-face-steam-tangerine.svg"
+           alt="Tangerine claypot with face and rising steam" />
+      <img class="claypot-img claypot-img--matcha"
+           src="assets/claypot-D-sleepy-matcha.svg"
+           alt="Sleepy matcha-green donabe pot" />
+    </div>
+  </div>
+</section>
 
-    <script>
-    const gridContainer = document.getElementById('gallery-grid');
-    let gridHtml = '';
-    pieceOrder.forEach(pieceId => {
-        const piece = piecesConfig[pieceId];
-        const galleryInfo = galleryConfig[pieceId];
-        if (piece && galleryInfo) {
-            gridHtml += `
-                <a href="${pieceId}.html" class="grid-item">
-                    <div class="image-wrapper">
-                        <img src="images/${pieceId}/${piece.images[0]}" alt="${piece.altTexts[0]}">
-                    </div>
-                    <div class="piece-info">
-                        <h3>${galleryInfo.displayTitle}</h3>
-                        <p>${galleryInfo.subtitle}</p>
-                    </div>
-                </a>
-            `;
-        }
+<!-- ── Vessels grid ─────────────────────────────────── -->
+<section class="page section" id="vessels">
+  <div class="section-head">
+    <div>
+      <span class="eyebrow">vessels · 2024 — 2025</span>
+      <h2>functional vessels<br>and structural forms.</h2>
+    </div>
+    <p class="right">
+      A small set of one-off pieces. Each is wheel-thrown, glazed once, and signed underfoot. When a piece is gone, it's gone.
+    </p>
+  </div>
+
+  <div class="vessels">
+    <a href="piece-1.html" class="vessel" data-reveal>
+      <div class="vessel-frame">
+        <img src="images/piece-1/img1.jpeg" alt="Floating Blue Jar — white stoneware with floating blue glaze">
+      </div>
+      <div class="vessel-meta">
+        <span class="vessel-name">Floating Blue Jar</span>
+        <span class="vessel-price">2025</span>
+      </div>
+    </a>
+
+    <a href="piece-2.html" class="vessel" data-reveal>
+      <div class="vessel-frame">
+        <img src="images/piece-2/img1.jpeg" alt="Shino Water Pitchers — brown stoneware with iron spotting">
+      </div>
+      <div class="vessel-meta">
+        <span class="vessel-name">Shino Water Pitchers</span>
+        <span class="vessel-price">2025</span>
+      </div>
+    </a>
+
+    <a href="piece-3.html" class="vessel" data-reveal>
+      <div class="vessel-frame">
+        <img src="images/piece-3/img1.jpeg" alt="Alberta Lidded Jar — brown stoneware with Alberta slip glaze">
+      </div>
+      <div class="vessel-meta">
+        <span class="vessel-name">Alberta Lidded Jar</span>
+        <span class="vessel-price">2025</span>
+      </div>
+    </a>
+
+    <a href="piece-4.html" class="vessel" data-reveal>
+      <div class="vessel-frame">
+        <img src="images/piece-4/img1.jpeg" alt="White Jar with Blue Dot — brown stoneware inspired by Chinese porcelain">
+      </div>
+      <div class="vessel-meta">
+        <span class="vessel-name">White Jar, Blue Dot</span>
+        <span class="vessel-price">2025</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ── Commissions teaser ──────────────────────────── -->
+<section class="commissions" id="commissions">
+  <div data-reveal>
+    <span class="eyebrow">commissions · open</span>
+    <h2>tell me what<br>you'd like <em>to hold.</em></h2>
+    <p>
+      A wedding gift, a heavier mug, a deeper donabe for stew. Every commission starts with an email — a few back-and-forths on form, glaze, and weight — and ends with a piece signed under your name.
+    </p>
+    <ul class="commissions-list">
+      <li>donabe, custom dimensions</li>
+      <li>tea sets &amp; pour-overs</li>
+      <li>matching dinnerware runs</li>
+      <li>memorial &amp; wedding pieces</li>
+    </ul>
+    <div class="commissions-cta">
+      <a href="commissions.html" class="btn" data-magnetic>start a commission →</a>
+      <a href="contact.html" class="link-arrow">just ask a question</a>
+    </div>
+  </div>
+
+  <div class="commissions-art" data-reveal>
+    <img src="assets/claypot-A-face-steam-tangerine.svg"
+         alt="Tangerine claypot character with steam rising" />
+  </div>
+</section>
+
+<!-- ── Footer ──────────────────────────────────────── -->
+<footer class="page foot">
+  <div>© 2025 Kavin Lam · made in Atlanta</div>
+  <div>
+    <a href="contact.html" class="link-arrow">contact</a>
+  </div>
+</footer>
+
+<script>
+(function () {
+  // mobile nav toggle
+  const hamburger = document.querySelector('.nav-hamburger');
+  const drawer    = document.querySelector('.nav-mobile-drawer');
+  hamburger.addEventListener('click', () => {
+    const open = drawer.classList.toggle('is-open');
+    hamburger.classList.toggle('is-open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  drawer.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      drawer.classList.remove('is-open');
+      hamburger.classList.remove('is-open');
+      document.body.style.overflow = '';
     });
-    gridContainer.innerHTML = gridHtml;
-    </script>
+  });
+
+  // reveal-on-scroll
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduced) {
+    document.querySelectorAll('[data-reveal]').forEach(el => el.classList.add('is-revealed'));
+    document.querySelectorAll('.vessel').forEach(el => el.classList.add('is-revealed'));
+  } else {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('is-revealed'), i * 80);
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('[data-reveal], .vessel').forEach(el => io.observe(el));
+  }
+
+  // magnetic CTA
+  document.querySelectorAll('[data-magnetic]').forEach(btn => {
+    btn.addEventListener('mousemove', (e) => {
+      const r = btn.getBoundingClientRect();
+      const x = (e.clientX - r.left - r.width  / 2) * 0.25;
+      const y = (e.clientY - r.top  - r.height / 2) * 0.25;
+      btn.style.transform = `translate(${x}px, ${y}px)`;
+    });
+    btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
+  });
+})();
+</script>
+
 </body>
 </html>
