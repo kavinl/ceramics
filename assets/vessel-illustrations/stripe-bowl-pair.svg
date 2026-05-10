@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 250" width="200" height="250">
+  <title>Stripe Bowl Pair — Brown Ranger clay, wax resist stripe, clear glaze</title>
+
+  <!-- LEFT BOWL fill -->
+  <path fill="#D0C4AE" opacity="0.90"
+    d="M10 108 Q14 100 50 98 Q86 100 90 108 L84 158 Q70 178 50 180 Q30 178 16 158 Z"/>
+
+  <!-- left bowl stripe -->
+  <path fill="#B8674E" opacity="0.70"
+    d="M46 98 L54 98 L58 180 L42 180 Z"/>
+
+  <!-- left bowl outline -->
+  <path fill="none" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+    d="M10 106 Q14 98 50 96 Q86 98 90 106 L84 156 Q70 176 50 178 Q30 176 16 156 Z"/>
+
+  <!-- left bowl rim ellipse -->
+  <ellipse cx="50" cy="106" rx="40" ry="8" fill="none" stroke="#1A1A1A" stroke-width="1.6"/>
+
+  <!-- left bowl foot -->
+  <path fill="none" stroke="#1A1A1A" stroke-width="1.6" stroke-linecap="round"
+    d="M36 178 Q50 183 64 178"/>
+
+  <!-- RIGHT BOWL fill -->
+  <path fill="#D0C4AE" opacity="0.90"
+    d="M110 108 Q114 100 150 98 Q186 100 190 108 L184 158 Q170 178 150 180 Q130 178 116 158 Z"/>
+
+  <!-- right bowl stripe -->
+  <path fill="#B8674E" opacity="0.70"
+    d="M146 98 L154 98 L158 180 L142 180 Z"/>
+
+  <!-- right bowl outline -->
+  <path fill="none" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+    d="M110 106 Q114 98 150 96 Q186 98 190 106 L184 156 Q170 176 150 178 Q130 176 116 156 Z"/>
+
+  <!-- right bowl rim ellipse -->
+  <ellipse cx="150" cy="106" rx="40" ry="8" fill="none" stroke="#1A1A1A" stroke-width="1.6"/>
+
+  <!-- right bowl foot -->
+  <path fill="none" stroke="#1A1A1A" stroke-width="1.6" stroke-linecap="round"
+    d="M136 178 Q150 183 164 178"/>
+</svg>

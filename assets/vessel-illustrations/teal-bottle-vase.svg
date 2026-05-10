@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 250" width="200" height="250">
+  <title>Teal Bottle Vase — alkaline glaze cone 6</title>
+
+  <!-- fill -->
+  <path fill="#5FA39E" opacity="0.88"
+    d="M107 26 Q113 26 114 40 L116 65 Q140 82 152 118 Q162 148 156 178 Q144 208 100 210 Q56 208 44 178 Q38 148 48 118 Q60 82 84 65 L86 40 Q87 26 93 26 Z"/>
+
+  <!-- glaze sheen -->
+  <path fill="none" stroke="#8ECFCA" stroke-width="1.6" stroke-linecap="round" opacity="0.65"
+    d="M68 96 Q75 82 80 70"/>
+
+  <!-- body outline -->
+  <path fill="none" stroke="#1A1A1A" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"
+    d="M107 24 Q114 24 115 38 L117 63 Q141 80 153 116 Q163 146 157 176 Q145 206 100 208 Q55 206 43 176 Q37 146 47 116 Q59 80 83 63 L85 38 Q86 24 93 24"/>
+
+  <!-- neck opening -->
+  <path fill="none" stroke="#1A1A1A" stroke-width="2.2" stroke-linecap="round"
+    d="M93 24 Q100 20 107 24"/>
+  <path fill="none" stroke="#1A1A1A" stroke-width="1.2" stroke-linecap="round"
+    d="M93 24 Q100 28 107 24"/>
+
+  <!-- shoulder line -->
+  <path fill="none" stroke="#1A1A1A" stroke-width="1.2" stroke-linecap="round" opacity="0.5"
+    d="M83 63 Q100 58 117 63"/>
+
+  <!-- foot ring -->
+  <path fill="none" stroke="#1A1A1A" stroke-width="1.8" stroke-linecap="round"
+    d="M66 208 Q100 213 134 208"/>
+</svg>

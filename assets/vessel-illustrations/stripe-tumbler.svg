@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 250" width="200" height="250">
+  <title>Stripe Tumbler — Brown Ranger clay, wax resist stripe, clear glaze</title>
+
+  <!-- body fill -->
+  <path fill="#D0C4AE" opacity="0.90"
+    d="M58 52 Q60 48 100 48 Q140 48 142 52 L148 188 Q144 196 100 198 Q56 196 52 188 Z"/>
+
+  <!-- wax resist stripe (raw clay, no glaze) -->
+  <rect x="92" y="48" width="12" height="150" fill="#B8674E" opacity="0.75"/>
+
+  <!-- body outline -->
+  <path fill="none" stroke="#1A1A1A" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"
+    d="M58 50 Q60 46 100 46 Q140 46 142 50 L148 186 Q144 194 100 196 Q56 194 52 186 Z"/>
+
+  <!-- rim ellipse -->
+  <ellipse cx="100" cy="50" rx="42" ry="7" fill="none" stroke="#1A1A1A" stroke-width="1.8"/>
+
+  <!-- interior dark (seen from top) -->
+  <ellipse cx="100" cy="50" rx="36" ry="5.5" fill="#5A4E3C" opacity="0.30"/>
+
+  <!-- foot ellipse -->
+  <path fill="none" stroke="#1A1A1A" stroke-width="1.8" stroke-linecap="round"
+    d="M66 196 Q100 201 134 196"/>
+
+  <!-- subtle vertical throw lines on body -->
+  <path fill="none" stroke="#1A1A1A" stroke-width="0.7" stroke-linecap="round" opacity="0.20"
+    d="M74 56 L70 190"/>
+  <path fill="none" stroke="#1A1A1A" stroke-width="0.7" stroke-linecap="round" opacity="0.20"
+    d="M126 56 L130 190"/>
+</svg>

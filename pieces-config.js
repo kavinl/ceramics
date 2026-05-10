@@ -154,6 +154,123 @@ const piecesConfig = {
             <p>The entire process from wet clay to finished piece took roughly four weeks, accounting for drying time, bisque firing, glazing, and final firing schedules.</p>
         `
     },
+    'piece-5': {
+        id: 'piece-5',
+        title: 'Teal Bottle Vase 2026',
+        shortTitle: 'Teal Bottle Vase',
+        date: '2026-01-01',
+        dateDisplay: '2026',
+        material: 'Stoneware',
+        glaze: 'Alkaline cone 6 glaze',
+        location: 'Callanwolde, Atlanta',
+        images: [
+            'assets/vessel-illustrations/teal-bottle-vase.svg'
+        ],
+        altTexts: [
+            'Teal bottle vase — handmade ceramic with alkaline cone 6 glaze, Callanwolde Atlanta'
+        ],
+        seo: {
+            metaDescription: 'Teal Bottle Vase 2026 — handmade stoneware ceramic bottle vase with alkaline cone 6 glaze. Fired at Callanwolde, Atlanta. Pottery by Kavin Lam.',
+            keywords: 'teal vase, ceramic vase, alkaline glaze, cone 6, handmade ceramics Atlanta, bottle vase, Callanwolde',
+            ogTitle: 'Teal Bottle Vase — Handmade Ceramic Pottery',
+            ogDescription: 'Handmade stoneware bottle vase with alkaline cone 6 glaze by ceramic artist Kavin Lam.'
+        },
+        schema: {
+            artMedium: 'Stoneware with alkaline cone 6 glaze',
+            blogDescription: 'A handmade stoneware bottle vase with alkaline cone 6 glaze, fired at Callanwolde in Atlanta.'
+        },
+        detailsHtml: `
+            <h2>About This Piece</h2>
+            <p>This bottle vase came out of working with an alkaline glaze at cone 6—a chemistry that produces the vivid, saturated teal that's difficult to achieve at lower temperatures. The form is a simple bottle: narrow neck, full rounded shoulder, tapering body. The glaze does the talking.</p>
+
+            <h2>The Alkaline Glaze</h2>
+            <p>Alkaline glazes are some of the oldest in ceramic history—used in ancient Near Eastern and Chinese pottery for their brilliant turquoise and teal surfaces. At cone 6, this glaze fires to a deep, saturated teal. Where it pools in recesses, the color deepens toward blue-green; on the upper shoulders it lightens toward a more watery turquoise.</p>
+
+            <h2>Form</h2>
+            <p>The bottle shape is intentionally restrained—a narrow opening, a full shoulder, a foot ring that lifts it slightly off the table. Functional as a vase, but works as a sculptural object on its own.</p>
+
+            <h2>Making Process</h2>
+            <p>Thrown on the wheel at Callanwolde in Atlanta and trimmed to refine the neck and foot. The alkaline glaze was applied by dipping. Fired to cone 6 in an electric kiln.</p>
+        `
+    },
+    'piece-6': {
+        id: 'piece-6',
+        title: 'Stripe Mugs 2026',
+        shortTitle: 'Stripe Mugs',
+        date: '2026-01-01',
+        dateDisplay: '2026',
+        material: 'Brown Ranger stoneware',
+        glaze: 'Clear glaze with wax-resist raw stripe',
+        location: 'Kentucky Mudworks',
+        images: [
+            'assets/vessel-illustrations/stripe-tumbler.svg'
+        ],
+        altTexts: [
+            'Stripe mugs — Brown Ranger stoneware with raw clay wax-resist stripe, Kentucky Mudworks'
+        ],
+        seo: {
+            metaDescription: 'Stripe Mugs 2026 — wheel-thrown Brown Ranger stoneware mugs with wax-resist raw clay stripe and clear glaze. Thrown at Kentucky Mudworks. Pottery by Kavin Lam.',
+            keywords: 'ceramic mugs, pottery mugs, wax resist, raw clay stripe, Brown Ranger clay, Kentucky Mudworks, handmade ceramics, tumbler',
+            ogTitle: 'Stripe Mugs — Handmade Ceramic Pottery',
+            ogDescription: 'Wheel-thrown Brown Ranger stoneware mugs with wax-resist raw clay stripe and clear glaze by ceramic artist Kavin Lam.'
+        },
+        schema: {
+            artMedium: 'Brown Ranger stoneware with clear glaze and wax-resist raw stripe',
+            blogDescription: 'Wheel-thrown Brown Ranger stoneware mugs with wax-resist raw clay stripe and clear glaze, thrown at Kentucky Mudworks.'
+        },
+        detailsHtml: `
+            <h2>About This Piece</h2>
+            <p>These mugs were thrown at Kentucky Mudworks in Brown Ranger—a warm, iron-rich brown stoneware that fires to an earthy, speckled surface. The vertical stripe runs from rim to foot, left raw where wax resisted the glaze, while the rest of the body carries a clear coat that lets the clay speak for itself.</p>
+
+            <h2>Brown Ranger Clay</h2>
+            <p>Brown Ranger is a brown stoneware body with visible texture—small particles of grog and iron that give the fired surface warmth and depth. Under a clear glaze, it shows its full character: warm tans, speckled browns, hints of iron orange where the body is thicker.</p>
+
+            <h2>The Wax Resist Stripe</h2>
+            <p>Before glazing, a vertical line was painted onto each mug with wax. The wax repels the liquid glaze, leaving that stripe of clay bare after firing. Where the glaze covers the body, the surface is smooth and slightly glossy; where the wax was, the clay fires raw—matte, rougher in texture, a warm terracotta orange from the iron in the body.</p>
+
+            <h2>Making Process</h2>
+            <p>Thrown at Kentucky Mudworks, trimmed to refine the foot and wall thickness. After bisque firing, wax was applied in a single vertical line on each mug. The pieces were then dipped in clear glaze. Fired in a reduction kiln to bring out the iron in the clay body.</p>
+        `
+    },
+    'piece-7': {
+        id: 'piece-7',
+        title: 'Stripe Bowls 2026',
+        shortTitle: 'Stripe Bowls',
+        date: '2026-01-01',
+        dateDisplay: '2026',
+        material: 'Brown Ranger stoneware',
+        glaze: 'Clear glaze with wax-resist raw stripe',
+        location: 'Kentucky Mudworks',
+        images: [
+            'assets/vessel-illustrations/stripe-bowl-pair.svg'
+        ],
+        altTexts: [
+            'Stripe bowls — Brown Ranger stoneware pair with raw clay wax-resist stripe, Kentucky Mudworks'
+        ],
+        seo: {
+            metaDescription: 'Stripe Bowls 2026 — wheel-thrown Brown Ranger stoneware bowls with wax-resist raw clay stripe and clear glaze. Thrown at Kentucky Mudworks. Pottery by Kavin Lam.',
+            keywords: 'ceramic bowls, pottery bowls, wax resist, raw clay stripe, Brown Ranger clay, Kentucky Mudworks, handmade ceramics, functional pottery',
+            ogTitle: 'Stripe Bowls — Handmade Ceramic Pottery',
+            ogDescription: 'Wheel-thrown Brown Ranger stoneware bowls with wax-resist raw clay stripe and clear glaze by ceramic artist Kavin Lam.'
+        },
+        schema: {
+            artMedium: 'Brown Ranger stoneware with clear glaze and wax-resist raw stripe',
+            blogDescription: 'Wheel-thrown Brown Ranger stoneware bowls with wax-resist raw clay stripe and clear glaze, thrown at Kentucky Mudworks.'
+        },
+        detailsHtml: `
+            <h2>About This Piece</h2>
+            <p>A matching set of bowls thrown at Kentucky Mudworks in Brown Ranger stoneware. Wide, open forms with a flared rim—made to be held as much as used. Each carries a single vertical stripe left raw by a wax resist, running from rim to foot where the glaze couldn't reach.</p>
+
+            <h2>The Clay</h2>
+            <p>Brown Ranger is an iron-rich brown stoneware that brings texture and warmth to every piece. Thrown as a set, these bowls were made in the same session so they'd share consistent wall thickness, opening width, and foot diameter. They're meant to live together.</p>
+
+            <h2>The Wax Resist Stripe</h2>
+            <p>After bisque firing, a line of wax was painted down the exterior of each bowl before glazing. The liquid clear glaze beads off the wax; where wax was applied, the clay fires raw and exposed. The contrast between the smooth, slightly glossy clear glaze and the matte raw clay is the whole aesthetic of the piece.</p>
+
+            <h2>Making Process</h2>
+            <p>Thrown at Kentucky Mudworks, trimmed to a small foot ring. After bisque, wax applied, then dipped in clear glaze. Fired in a reduction kiln that deepens the warm orange and brown tones in the raw stripe and through the glazed surface.</p>
+        `
+    },
     'piece-4': {
         id: 'piece-4',
         title: 'White Jar with Blue Dot 2025',
@@ -229,11 +346,23 @@ const galleryConfig = {
     'piece-4': {
         displayTitle: 'White Jar with Blue Dot 2025',
         subtitle: 'Brown stoneware, 2025'
+    },
+    'piece-5': {
+        displayTitle: 'Teal Bottle Vase 2026',
+        subtitle: 'Stoneware, 2026'
+    },
+    'piece-6': {
+        displayTitle: 'Stripe Mugs 2026',
+        subtitle: 'Brown Ranger stoneware, 2026'
+    },
+    'piece-7': {
+        displayTitle: 'Stripe Bowls 2026',
+        subtitle: 'Brown Ranger stoneware, 2026'
     }
 };
 
 // Navigation helper
-const pieceOrder = ['piece-1', 'piece-2', 'piece-3', 'piece-4'];
+const pieceOrder = ['piece-1', 'piece-2', 'piece-3', 'piece-4', 'piece-5', 'piece-6', 'piece-7'];
 
 function getNextPiece(currentId) {
     const currentIndex = pieceOrder.indexOf(currentId);

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 250" width="200" height="250">
+  <title>Shallow Swirl Bowl — sandy clay body, blue-gray glaze swirl</title>
+
+  <!-- bowl exterior fill -->
+  <path fill="#D0C4AE" opacity="0.90"
+    d="M18 128 Q18 100 100 96 Q182 100 182 128 L176 170 Q160 196 100 198 Q40 196 24 170 Z"/>
+
+  <!-- bowl interior fill (slightly different tone, seen from above) -->
+  <ellipse cx="100" cy="128" rx="82" ry="18" fill="#C8BC9E" opacity="0.85"/>
+
+  <!-- swirl marks inside bowl -->
+  <path fill="none" stroke="#9AADC4" stroke-width="3.0" stroke-linecap="round" opacity="0.70"
+    d="M100 128 Q116 118 122 128 Q128 138 116 146 Q100 154 86 144 Q74 132 82 118 Q94 104 114 108"/>
+  <path fill="none" stroke="#9AADC4" stroke-width="1.6" stroke-linecap="round" opacity="0.45"
+    d="M96 128 Q104 122 108 128 Q112 134 104 140 Q96 144 90 138"/>
+
+  <!-- bowl outer outline -->
+  <path fill="none" stroke="#1A1A1A" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"
+    d="M18 126 Q18 98 100 94 Q182 98 182 126 L176 168 Q160 194 100 196 Q40 194 24 168 Z"/>
+
+  <!-- rim ellipse -->
+  <ellipse cx="100" cy="126" rx="82" ry="18" fill="none" stroke="#1A1A1A" stroke-width="2.2"/>
+
+  <!-- foot ring -->
+  <path fill="none" stroke="#1A1A1A" stroke-width="1.8" stroke-linecap="round"
+    d="M72 196 Q100 201 128 196"/>
+</svg>

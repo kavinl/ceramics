@@ -403,6 +403,11 @@
       transition: transform var(--dur-slow) var(--ease-organic);
     }
     .vessel:hover .vessel-frame img { transform: scale(1.04) translateY(-3px); }
+    .vessel-frame--illustration img {
+      object-fit: contain;
+      padding: 1.5rem;
+    }
+    .vessel:hover .vessel-frame--illustration img { transform: scale(1.04) translateY(-3px); }
 
     /* clip-reveal for vessel frames */
     .vessel-frame::after {
@@ -428,6 +433,9 @@
     .vessel:nth-child(2) { margin-top: 2.5rem; }
     .vessel:nth-child(3) { margin-top: 0.75rem; }
     .vessel:nth-child(4) { margin-top: 3.25rem; }
+    .vessel:nth-child(5) { margin-top: 1.5rem; }
+    .vessel:nth-child(6) { margin-top: 3rem; }
+    .vessel:nth-child(7) { margin-top: 0.5rem; }
 
     /* ── Commissions teaser ────────────────────────── */
     .commissions {
@@ -584,8 +592,7 @@
 
       .vessels { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
       .vessel:nth-child(n) { margin-top: 0; }
-      .vessel:nth-child(2) { margin-top: 2rem; }
-      .vessel:nth-child(4) { margin-top: 2rem; }
+      .vessel:nth-child(2n) { margin-top: 2rem; }
 
       .section { padding: 3.5rem 0; }
       .section-head { flex-direction: column; align-items: flex-start; margin-bottom: 2rem; }
@@ -616,8 +623,8 @@
       .btn { width: 100%; text-align: center; padding: 1rem; }
 
       .vessels { grid-template-columns: 1fr 1fr; gap: 0.875rem; }
-      .vessel:nth-child(2) { margin-top: 1.5rem; }
-      .vessel:nth-child(4) { margin-top: 1.5rem; }
+      .vessel:nth-child(n) { margin-top: 0; }
+      .vessel:nth-child(2n) { margin-top: 1.5rem; }
       .vessel-name { font-size: 0.9rem; }
       .vessel-price { font-size: 0.72rem; }
 
@@ -717,7 +724,7 @@
 <section class="page section" id="vessels">
   <div class="section-head">
     <div>
-      <span class="eyebrow">vessels · 2024 — 2025</span>
+      <span class="eyebrow">vessels · 2024 — 2026</span>
       <h2>functional vessels<br>and structural forms.</h2>
     </div>
     <p class="right">
@@ -763,6 +770,36 @@
       <div class="vessel-meta">
         <span class="vessel-name">White Jar, Blue Dot</span>
         <span class="vessel-price">2025</span>
+      </div>
+    </a>
+
+    <a href="piece-5.html" class="vessel" data-reveal>
+      <div class="vessel-frame vessel-frame--illustration">
+        <img src="assets/vessel-illustrations/teal-bottle-vase.svg" alt="Teal Bottle Vase — stoneware with alkaline cone 6 glaze, Callanwolde Atlanta">
+      </div>
+      <div class="vessel-meta">
+        <span class="vessel-name">Teal Bottle Vase</span>
+        <span class="vessel-price">2026</span>
+      </div>
+    </a>
+
+    <a href="piece-6.html" class="vessel" data-reveal>
+      <div class="vessel-frame vessel-frame--illustration">
+        <img src="assets/vessel-illustrations/stripe-tumbler.svg" alt="Stripe Mugs — Brown Ranger stoneware with raw clay wax-resist stripe">
+      </div>
+      <div class="vessel-meta">
+        <span class="vessel-name">Stripe Mugs</span>
+        <span class="vessel-price">2026</span>
+      </div>
+    </a>
+
+    <a href="piece-7.html" class="vessel" data-reveal>
+      <div class="vessel-frame vessel-frame--illustration">
+        <img src="assets/vessel-illustrations/stripe-bowl-pair.svg" alt="Stripe Bowls — Brown Ranger stoneware pair with raw clay wax-resist stripe">
+      </div>
+      <div class="vessel-meta">
+        <span class="vessel-name">Stripe Bowls</span>
+        <span class="vessel-price">2026</span>
       </div>
     </a>
   </div>
