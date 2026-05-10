@@ -1058,6 +1058,38 @@ footer p {
     text-align: left;
 }
 
+/* 5-step "how yours is made" grid */
+.cp-how-steps {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2.5rem;
+    text-align: left;
+    align-items: start;
+}
+
+/* gentle stagger so the steps feel hand-arranged, not machine-set */
+.cp-how-steps > div:nth-child(1) { margin-top: 0; }
+.cp-how-steps > div:nth-child(2) { margin-top: 2.5rem; }
+.cp-how-steps > div:nth-child(3) { margin-top: 0.75rem; }
+.cp-how-steps > div:nth-child(4) { margin-top: 3.25rem; }
+.cp-how-steps > div:nth-child(5) { margin-top: 1.5rem; }
+
+@media (max-width: 1024px) {
+    .cp-how-steps {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .cp-how-steps > div:nth-child(n) { margin-top: 0; }
+}
+
+@media (max-width: 600px) {
+    .cp-how-steps {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
 /* narrow prose wrapper for text inside .donabe-process */
 .cp-prose {
     max-width: 640px;
